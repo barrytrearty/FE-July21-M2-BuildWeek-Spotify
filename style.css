@@ -1,0 +1,20 @@
+
+.sidebar-container{
+    height: 100%;
+    
+}
+.sidebar{
+    height: 80%;
+    width: 300px;
+
+}  
+#scroll{
+    background-color: rgb(41, 32, 32);
+}
+
+}
+.add-on{
+    font-family: sans-serif;
+    font-weight: initial;
+    font-size: 0px;
+}
