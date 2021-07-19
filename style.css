@@ -1,3 +1,4 @@
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -158,4 +159,112 @@ progress::-webkit-progress-bar {
     font-size: 11px;
 }
 
+
+=======
+
+.opening-sect {
+  background: linear-gradient(
+    180deg,
+    rgb(63, 7, 7) 0%,
+    rgba(18, 18, 18, 255) 60%
+  );
+  background-repeat: no-repeat;
+}
+
+.home-body {
+  background-color: rgba(18, 18, 18, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+h2.section-heading-morning {
+  font-size: 1rem;
+}
+
+.section-heading-recommended {
+  display: block;
+}
+
+.subheading-recommended {
+  display: block;
+}
+
+.album-card {
+  background-color: rgba(24, 24, 24, 255);
+  color: white;
+  max-height: 15rem;
+  padding: 0;
+  line-clamp: 2;
+}
+
+.album-card-img {
+  padding: 0.5rem;
+  padding-bottom: 0;
+  border-radius: 10%;
+}
+
+.album-card h5 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0px;
+}
+
+.album-card p,
+h3,
+h4 {
+  font-size: 0.6rem;
+}
+
+.album-card p {
+  padding: 0px;
+}
+
+h4 {
+  color: white;
+  font-weight: 600;
+}
+
+.title-row {
+  justify-content: space-between;
+}
+
+.morning-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(100, 97, 97, 0.267);
+  color: white;
+  /* font-size: 0.2rem; */
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  border-radius: 3%;
+  margin-bottom: 0.5rem;
+}
+
+.morning-card img {
+  width: 2.5rem;
+}
+
+.morning-card h5 {
+  padding-left: 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.sidebar-container {
+  height: 100%;
+}
+.sidebar {
+  height: 80%;
+  width: 300px;
+}
+#scroll {
+  background-color: rgb(41, 32, 32);
+}
 
