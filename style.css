@@ -513,3 +513,7 @@ td img {
   height: 300px;
   scrollbar-color: black;
 }
+
+.table-borderless tr:hover {
+  background: white;
+}
