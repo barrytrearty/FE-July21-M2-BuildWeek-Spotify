@@ -29,12 +29,12 @@
             
             <div class="col-md-4">
                     <p style="text-align:center;"><strong>To continue, log in to Spotify.</strong></p>
-                   <a ng-href="/en/login/facebook" class="btn btn-block btn-facebook ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Facebook Button" analytics-label="{{" clientid="" }}="" href="/en/login/facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook mr-3" viewBox="0 0 16 16">
+                   <a ng-href="/en/login/facebook" class="btn roosa-btn btn-block btn-facebook ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Facebook Button" analytics-label="{{" clientid="" }}="" href="/en/login/facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook mr-3" viewBox="0 0 16 16">
   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
 </svg>Continue with Facebook</a>
-                    <a ng-href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQCD3abgoHokM4Homu6KZnWZUR7ypP0RCwQRQYNuKyJwdjF5eowmakHPYh%2FNUB7ffklOLbsPHkXV4qGq%2B%2FMgWpFO%2FG9Mk9wd758Z3Cqepo31OalAfWRWFMUW1VWKU11naiL0p356uRNMSoEQiWs%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect" class="btn btn-block btn-black btn-apple ng-binding mb-3" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Apple Button" analytics-label="{{" clientid="" }}="" href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQCD3abgoHokM4Homu6KZnWZUR7ypP0RCwQRQYNuKyJwdjF5eowmakHPYh%2FNUB7ffklOLbsPHkXV4qGq%2B%2FMgWpFO%2FG9Mk9wd758Z3Cqepo31OalAfWRWFMUW1VWKU11naiL0p356uRNMSoEQiWs%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect"><i class="fab fa-apple mr-3"></i>Continue with Apple</a>
+                    <a ng-href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQCD3abgoHokM4Homu6KZnWZUR7ypP0RCwQRQYNuKyJwdjF5eowmakHPYh%2FNUB7ffklOLbsPHkXV4qGq%2B%2FMgWpFO%2FG9Mk9wd758Z3Cqepo31OalAfWRWFMUW1VWKU11naiL0p356uRNMSoEQiWs%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect" class="btn roosa-btn btn-block btn-black btn-apple ng-binding mb-3" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Apple Button" analytics-label="{{" clientid="" }}="" href="https://appleid.apple.com/auth/authorize?client_id=com.spotify.accounts&amp;response_type=code&amp;response_mode=form_post&amp;scope=name%20email&amp;state=AQCD3abgoHokM4Homu6KZnWZUR7ypP0RCwQRQYNuKyJwdjF5eowmakHPYh%2FNUB7ffklOLbsPHkXV4qGq%2B%2FMgWpFO%2FG9Mk9wd758Z3Cqepo31OalAfWRWFMUW1VWKU11naiL0p356uRNMSoEQiWs%3D&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect"><i class="fab fa-apple mr-3"></i>Continue with Apple</a>
                     
-                    <h6><span><strong>OR</strong></span></h6>
+                    <h6 class="roosa-h6"><span><strong>OR</strong></span></h6>
                         <div class="row">
                             
                                 <div class="col">
@@ -58,7 +58,7 @@
             </label>
           </div>
           <div class="col-md-12">  
-  <button type="submit" class="btn btn-success ml-4 mb-3 float-right">LOG IN</button>
+  <button type="submit" class="btn roosa-btn btn-success ml-4 mb-3 float-right">LOG IN</button>
 </form>
          </div>
           </div>
@@ -80,7 +80,7 @@
                                     <div class="divider">
                                     </div>
                                         <p style="text-align:center;"><strong>Don't have an account?</strong></p>
-                                        <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus" class="btn btn-block btn-default ng-binding" role="button" href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus">Sign up for Spotify</a>
+                                        <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus" class="btn roosa-btn btn-block btn-default ng-binding" role="button" href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus">Sign up for Spotify</a>
                                   
                                    
                                  <hr class="my-4">
