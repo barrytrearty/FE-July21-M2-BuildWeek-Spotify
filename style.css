@@ -507,3 +507,9 @@ td img {
 .posted p {
   margin-left: 5px;
 }
+
+.scrollbar-list {
+  /* overflow: scroll; */
+  height: 300px;
+  scrollbar-color: black;
+}
