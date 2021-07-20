@@ -1,0 +1,342 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 60px;
+  background-color: black;
+  color: white;
+  margin-bottom: 0px;
+  z-index: 2;
+}
+
+.footercontainer {
+  position: relative;
+}
+
+.container.roosa-container {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#play {
+  position: absolute;
+  top: 1px;
+  left: 50%;
+}
+
+#forward {
+  position: absolute;
+  top: 2px;
+  left: 58%;
+}
+
+#backwards {
+  position: absolute;
+  top: 2px;
+  left: 43%;
+}
+
+#shuffle {
+  position: absolute;
+  top: 2px;
+  left: 37%;
+}
+
+#repeat {
+  position: absolute;
+  top: 2px;
+  left: 63%;
+}
+
+#heart {
+  position: absolute;
+  top: 2px;
+  left: 130px;
+}
+
+#queue {
+  position: absolute;
+  top: 2px;
+  left: 80%;
+}
+
+#device {
+  position: absolute;
+  top: 2px;
+  left: 84%;
+}
+
+#volume {
+  position: absolute;
+  top: 2px;
+  left: 88%;
+}
+
+/* .footer-icons-right {
+  display: flex;
+  flex-direction: row;
+  
+} */
+
+progress {
+  position: absolute;
+  display: inline-block;
+  width: 33%;
+  max-height: 5px;
+  left: 33%;
+  top: 60px;
+  background: white;
+  border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+  background: grey;
+  border-radius: 100px;
+}
+
+progress::-moz-progress-bar {
+  background: white;
+  border-radius: 100px;
+}
+
+progress::-webkit-progress-value {
+  background: white;
+  border-radius: 100px;
+}
+
+progress::-webkit-progress-bar {
+  background: grey;
+  border-radius: 100px;
+}
+
+.main-container {
+  margin-left: 150px;
+  margin-bottom: 125px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.holder {
+  display: inline;
+}
+.holder img {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+#volumeprogress {
+  position: absolute;
+  display: inline-block;
+  width: 5%;
+  max-height: 5px;
+  left: 92%;
+  top: 30px;
+  background: white;
+  border-radius: 50px;
+}
+
+.albumname {
+  position: absolute;
+  top: 15px;
+  left: 80px;
+}
+
+.albumname h4 {
+  font-size: 11px;
+}
+
+.albumname h3 {
+  font-size: 15px;
+}
+
+.minutes h5 {
+  position: absolute;
+  top: 45px;
+  left: 28%;
+  font-size: 11px;
+}
+
+.minutes h6 {
+  position: absolute;
+  top: 45px;
+  left: 70%;
+  font-size: 11px;
+}
+
+/* ///////////////////// */
+
+.opening-sect {
+  background: linear-gradient(
+    180deg,
+    rgb(63, 7, 7) 0%,
+    rgba(18, 18, 18, 255) 60%
+  );
+  background-repeat: no-repeat;
+}
+
+.home-body {
+  background-color: rgba(18, 18, 18, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2.section-heading,
+.section-heading-recommended {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.subheading-recommended {
+  font-size: 11px;
+  color: white;
+}
+
+.album-card2 {
+  color: white;
+  margin-bottom: 0.5rem;
+  line-clamp: 2;
+}
+
+.album-card2 img {
+  /* padding-bottom: 0; */
+  border-radius: 2%;
+  max-width: 100%;
+  height: auto;
+}
+
+.album-card2 h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  /*For line clamp*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.album-card2 p {
+  font-size: 0.8rem;
+  /* font-weight: 700; */
+}
+
+.album-card2-cont {
+  background-color: rgba(56, 50, 50, 0.849);
+  padding: 0.5rem;
+}
+
+h4.see-all {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.623);
+  font-weight: 600;
+  align-self: center;
+}
+
+.title-row {
+  justify-content: space-between;
+}
+
+.morning-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(100, 97, 97, 0.267);
+  color: white;
+  /* font-size: 0.2rem; */
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  border-radius: 3%;
+  margin-bottom: 0.5rem;
+}
+
+.morning-card img {
+  width: 2.5rem;
+}
+
+.morning-card h5 {
+  padding-left: 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.sidebar-container {
+  /* font-size: 0.rem; */
+  height: 100%;
+  background-color: rgb(31, 26, 26);
+  position: fixed;
+  z-index: 2;
+}
+.sidebar {
+  height: 80%;
+  width: 150px;
+}
+#scroll {
+  background-color: rgb(41, 32, 32);
+}
+
+.sidebar-container h6 {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.fixedLink {
+  position: fixed;
+  margin-bottom: 80px;
+  /* bottom: 90px; */
+  left: 0;
+  width: 150px;
+  height: 20px;
+  bottom: 0;
+  z-index: 3;
+  background-color: rgb(31, 26, 26);
+}
+
+@media (max-width: 547px) {
+  #play {
+    left: 55%;
+  }
+
+  #backwards {
+    left: 48%;
+  }
+
+  #forward {
+    left: 63%;
+  }
+
+  #repeat {
+    left: 68%;
+  }
+  #shuffle {
+    left: 42%;
+  }
+
+  #volume {
+    left: 78%;
+  }
+
+  #volumeprogress {
+    left: 83%;
+    width: 15%;
+  }
+
+  .minutes h5 {
+    left: 40%;
+  }
+
+  .minutes h6 {
+    left: 82%;
+  }
+
+  progress {
+    left: 48%;
+  }
+
+  /* .sidebar-container {
+    display: none;
+  } */
+}
