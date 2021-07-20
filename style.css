@@ -113,6 +113,8 @@ progress::-webkit-progress-bar {
 .main-container {
   margin-left: 150px;
   margin-bottom: 125px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .holder {
@@ -204,13 +206,17 @@ h2.section-heading,
 .album-card2 img {
   /* padding-bottom: 0; */
   border-radius: 2%;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .album-card2 h5 {
   font-size: 0.9rem;
   font-weight: 700;
+  /*For line clamp*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .album-card2 p {
