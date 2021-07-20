@@ -206,6 +206,7 @@ progress::-webkit-progress-bar {
 
 .album-card2 img {
   /* padding-bottom: 0; */
+  box-shadow: 2px 3px rgb(36, 30, 30);
   border-radius: 2%;
   max-width: 100%;
   height: auto;
@@ -226,8 +227,12 @@ progress::-webkit-progress-bar {
 }
 
 .album-card2-cont {
-  background-color: rgba(56, 50, 50, 0.849);
+  background-color: rgba(31, 27, 27, 0.849);
   padding: 0.5rem;
+}
+
+.album-card2-cont:hover {
+  background-color: rgb(59, 55, 55);
 }
 
 h4.see-all {
@@ -388,7 +393,7 @@ h4.see-all {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
-    rgb(100, 95, 95) 0%,
+    rgb(65, 60, 60) 0%,
     rgba(18, 18, 18, 255) 150px
   );
   background-repeat: no-repeat;
@@ -404,7 +409,7 @@ h4.see-all {
 
 .table-borderless td {
   color: white;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -505,10 +510,15 @@ td img {
 }
 
 .table-borderless tr:hover {
-  background: rgb(92, 87, 87);
+  background: rgb(59, 55, 55);
 }
 
 .artists-jumbo {
+  margin-bottom: 0%;
+  padding: 20px;
+}
+
+.artists-jumbo p {
   margin-bottom: 0%;
   padding: 0%;
 }
