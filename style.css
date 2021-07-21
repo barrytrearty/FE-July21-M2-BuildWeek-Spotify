@@ -112,7 +112,7 @@ progress::-webkit-progress-bar {
 
 .main-container {
   margin-bottom: 125px;
-  padding-right: 10px;
+  /* padding-right: 10px; */
   /* padding-left: 10px;
   padding-right: 10px; */
 }
@@ -261,7 +261,7 @@ h4.see-all {
 }
 
 .morning-card img {
-  width: 2.5rem;
+  width: 3rem;
 }
 
 .morning-card h5 {
@@ -513,7 +513,7 @@ td img {
   bottom: 5px;
 }
 
-#round-artist {
+.round-artist {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -701,3 +701,94 @@ h6.roosa-h6 {
   margin: auto;
   max-width: 500px;
 }
+
+.album-jumbo {
+  background: rgb(243, 0, 231);
+  background: rgb(243, 0, 231);
+  background: linear-gradient(
+    180deg,
+    rgba(230, 108, 155, 0.479) 13%,
+    rgba(177, 5, 162, 0.712) 25%,
+    rgb(136, 4, 134) 50%,
+    rgba(81, 3, 95, 0.72) 75%
+  );
+  background-size: 100%;
+  background-position: top;
+  margin-bottom: 0%;
+  padding: 20px;
+}
+
+.album-jumbo p {
+  margin-bottom: 0%;
+  padding: 0%;
+}
+
+.album-songs-container {
+  position: relative;
+  background: rgba(124, 9, 124, 0.219);
+  background: linear-gradient(
+    180deg,
+    rgb(71, 3, 54) 0%,
+    rgba(18, 18, 18, 255) 150px
+  );
+  background-repeat: no-repeat;
+}
+
+.album-heart {
+  color: white;
+  position: absolute;
+  left: 70px;
+  top: 25px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.album-dots {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+.artist-name {
+  color: rgba(255, 255, 255, 0.322);
+}
+
+.for-about-album {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.album-jumbo img {
+  height: 150px;
+  width: 150px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.album-jumbo h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.album-jumbo p {
+  color: white;
+}
+
+.album-jumbo img.round-artist1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0;
+  margin-right: 2px;
+}
+
+/* .album-summary {
+  flex-direction: row;
+  align-items: flex-end;
+} */
