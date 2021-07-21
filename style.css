@@ -359,6 +359,15 @@ h4.see-all {
   margin-bottom: 4px;
 } */
 
+.dropdown-menu {
+  background-color: rgba(31, 27, 27);
+}
+
+.dropdown-item {
+  background-color: rgba(31, 27, 27);
+  color: white;
+}
+
 .arrow-btn {
   width: 25px;
   height: 25px;
@@ -532,15 +541,19 @@ td img {
   font-size: 0.7rem;
   color: white;
   font-weight: 700;
+  margin-top: 0%;
 }
 
 .posted {
   display: flex;
   flex-direction: row;
+  margin-bottom: 0;
 }
 
 .posted p {
   margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 6px;
 }
 
 .scrollbar-list {
