@@ -331,18 +331,33 @@
    </div>
 
    <div class="container-fluid">
-    <button class="ml-3 btn btn-dark badge-pill" id="arrow1">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
-        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
-    </svg>
+    <!-- <button class="ml-3 btn btn-dark badge-pill" id="arrow1"> -->
+      <button class="ml-3 arrow-btn" id="arrow1">
+    
+    <i class="bi bi-chevron-left"></i>
     </button>
-    <button class="ml-3 btn btn-dark badge-pill" id="arrow2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-        <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-        </svg>
-    </button>
-     <div class="dropdown">
-        <button class="btn btn-dark badge-pill dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a href="artist.html"><button class="ml-3 arrow-btn arrow-btn-available" id="arrow2">
+        
+        <i class="bi bi-chevron-right"></i>
+    </button></a>
+
+    <div class="dropdown dropdown-position">
+      <button class="dropdown-login-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img id="profilePic" src="https://strive.school/favicon.ico">
+        <span class="d-none d-sm-inline">Strive Student</span>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Profile</a>
+        <a class="dropdown-item" href="#">Private Session</a>
+        <a class="dropdown-item" href="#">Settings</a>
+        <a class="dropdown-item" href="#">Update Spotify</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Log out</a>
+      </div>
+    </div>
+    
+     <!-- <div class="dropdown">
+        <button class="dropdown-login-button dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img id="profilePic" src="https://strive.school/favicon.ico">
             <span class="d-none d-sm-inline">Strive Student</span>
         </button>
@@ -362,10 +377,9 @@
         <a class="dropdown-item text-white" type="button">Log out</a>
    
 </div>  
+</div> -->
 </div>
-</div>
-</div>
-</div>
+
 
 <div class="footercontainer">
 <footer class="footer">

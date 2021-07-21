@@ -269,6 +269,10 @@ h4.see-all {
   font-weight: 600;
 }
 
+.morning-card:hover {
+  background-color: rgba(55, 55, 55, 0.267);
+}
+
 .sidebar-container {
   /* font-size: 0.rem; */
   height: 100%;
@@ -302,20 +306,21 @@ h4.see-all {
   background-color: black;
 }
 
-.dropdown {
+.dropdown-position {
   position: absolute;
   right: 20px;
   top: 10px;
-  /* z-index: -1; */
 }
 
-.btn {
+/* .btn {
   background-color: black;
-}
+} */
 
 #profilePic {
-  width: 30px !important;
-  height: 30px !important;
+  /* width: 30px !important;
+  height: 30px !important; */
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
 
@@ -323,6 +328,7 @@ h4.see-all {
   position: absolute;
   left: 0px;
   top: 10px;
+  border: none;
 }
 
 #arrow2 {
@@ -331,7 +337,7 @@ h4.see-all {
   top: 10px;
 }
 
-#boxArrow1 {
+/* #boxArrow1 {
   position: relative;
   left: 80px;
   top: 0px;
@@ -343,6 +349,33 @@ h4.see-all {
   left: 8px;
   top: 0px;
   margin-bottom: 4px;
+} */
+
+.arrow-btn {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(20, 18, 18, 0.384);
+  color: white;
+  border-radius: 50%;
+  border: none;
+}
+
+.arrow-btn-available {
+  background-color: rgba(20, 18, 18, 0.767);
+}
+
+.arrow-btn-available:hover {
+  background-color: rgba(39, 31, 31, 0.767);
+}
+
+.dropdown-login-button {
+  height: 27px;
+  width: 110px;
+  background-color: rgb(20, 18, 18);
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.65rem;
 }
 
 @media (min-width: 547px) {
@@ -582,11 +615,11 @@ h6.roosa-h6 span {
   padding: 16px 14px 18px;
 }
 
-.btn-default {
+/* .btn-default {
   color: #616467;
   box-shadow: inset 0 0 0 2px #616467;
   background-color: transparent;
-}
+} */
 
 #terms {
   font-size: 10px;
