@@ -17,6 +17,7 @@
     />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="spotifyclone.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
@@ -104,7 +105,17 @@
       </div>
       </div>
 
-<div class="main-container">
+      <!-- <div>
+        <button onclick="generateAlbum(album1)">Bohemian Rhapsody</button></div>
+        <div>
+        <button onclick="generateAlbum(album2)">News of the World</button></div> -->
+         <!--
+        <button onclick="generateBohemianAlbum()">Bohemian Rhapsody</button>
+        <button onclick="generateBohemianAlbum()">Bohemian Rhapsody</button>
+        <button onclick="generateBohemianAlbum()">Bohemian Rhapsody</button> -->
+     
+
+<div id="album-jumbotron-container" class="main-container-album">
   <div>
     <div class="jumbotron jumbotron-fluid img-fluid album-jumbo">
       <div class="for-about-album">
@@ -113,15 +124,18 @@
           <p><strong>ALBUM</strong> </p>
           <h1 class="album-title-jumbo">Bohemian Rhapsody (The Original Soundtrack)</h1>
           
-          <p class="album-summary"><img class="round-artist1" src="assets/mgmt.png" alt=""><strong> Queen</strong><i class="bi bi-dot"></i>2018<i class="bi bi-dot"></i>22 Songs, 1 hr 19 min</p>
+          <p class="album-summary"><img class="round-artist1 reflect" src="assets/mgmt.png" alt=""><strong> Queen</strong><i class="bi bi-dot"></i>2018<i class="bi bi-dot"></i>22 Songs, 1 hr 19 min</p>
         </div>
       </div>
      
    </div>
   </div>
+</div>
 
 
-  <div class="container-fluid album-songs-container">
+<div id="album-table-container-div">
+     <div class=" main-container main-container-album container-fluid album-songs-container">
+  
     <div class="top-of-artist-songs mb-3 pt-3">
     <div class="spotify-circle">
       <div class="half-of-pause first-pause"></div>
@@ -138,25 +152,25 @@
       <tr>
       <td>#</td>
       <td>TITLE</td>
-      <td><i class="bi bi-clock"></i></td>
+      <td><i class="bi bi-clock keep-on-page-clock"></i></td>
     </tr>
     </thead>
-    <tr>
+  
 
-    <tbody>
+    <tbody id="album-table-body">
       <tr>
         <td scope="row" class="align-middle"> 1</td>
       
         <td><div> 20th Century Fox Fanfare</div> <div class="artist-name">Queen</div> </td>
         
-        <td class="align-middle">3.34</td>
+        <td class="align-middle keep-on-page">3.34</td>
       </tr>
       <tr>
         <td scope="row" class="align-middle"> 2</td>
       
         <td><div>Somebody to Love </div> <div class="artist-name">Queen</div> </td>
         
-        <td class="align-middle"> 5.54</td>
+        <td class="align-middle keep-on-page"> 5.54</td>
       </tr>
 
       <tr>
@@ -164,7 +178,7 @@
       
         <td><div>Doing All Right -...Revisited </div> <div class="artist-name">Queen</div> </td>
         
-        <td class="align-middle">3.20 </td>
+        <td class="align-middle keep-on-page">3.20 </td>
         </tr>
 
         <tr>
@@ -172,7 +186,7 @@
         
           <td><div>Keep Yourself Alive - Live at the Rainbow </div> <div class="artist-name">Queen</div> </td>
           
-          <td class="align-middle"> 4.08</td>
+          <td class="align-middle keep-on-page"> 4.08</td>
         </tr>
      
         <tr>
@@ -180,7 +194,7 @@
         
           <td><div>Killer Queen </div> <div class="artist-name">Queen</div> </td>
           
-          <td class="align-middle"> 2.02</td>
+          <td class="align-middle keep-on-page"> 2.02</td>
         </tr>
 
         <tr>
@@ -188,7 +202,7 @@
         
           <td><div>Fat Bottomed Girl - Live in Paris </div> <div class="artist-name">Queen</div> </td>
           
-          <td class="align-middle"> 4.37</td>
+          <td class="align-middle keep-on-page"> 4.37</td>
         </tr>
       
       
@@ -199,7 +213,7 @@
 </td>
         
         
-        <td class="align-middle">5.54</td>
+        <td class="align-middle keep-on-page">5.54</td>
       </tr>
 
       <tr>
@@ -207,19 +221,22 @@
      
         <td><div>Now I'm Here - Live At The Hammersmith Odeon</div>  <div class="artist-name">Queen</div>  </td>
         
-        <td class="align-middle">4.25</td>
+        <td class="align-middle keep-on-page">4.25</td>
       </tr>
       <tr>
         <td scope="row" class="align-middle">9</td>
      
         <td><div> Crazy Little Thing Called Love</div>  <div class="artist-name">Queen</div> </td>
         
-        <td class="align-middle">2.43</td>
+        <td class="align-middle keep-on-page">2.43</td>
       </tr>
     </tbody>
   </table>
   </div>
-  </div>
+  </div> 
+  
+</div> ^^<!--END OF JS CONTAINER -->
+
 
       <div class="container-fluid">
         <!-- <button class="ml-3 btn btn-dark badge-pill" id="arrow1"> -->
@@ -250,7 +267,7 @@
           </div>
         </div>
     </div>  
-    </div>
+    
 
       <div class="footercontainer">
         <footer class="footer">

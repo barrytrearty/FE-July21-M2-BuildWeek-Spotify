@@ -349,20 +349,6 @@ h4.see-all {
   top: 10px;
 }
 
-/* #boxArrow1 {
-  position: relative;
-  left: 80px;
-  top: 0px;
-  margin-bottom: 2px;
-}
-
-#boxArrow2 {
-  position: relative;
-  left: 8px;
-  top: 0px;
-  margin-bottom: 4px;
-} */
-
 .dropdown-menu {
   background-color: rgba(31, 27, 27);
 }
@@ -403,6 +389,11 @@ h4.see-all {
   .main-container {
     margin-left: 175px;
   }
+
+  .main-container-album {
+    margin-left: 175px;
+  }
+
   #play {
     left: 50%;
   }
@@ -440,6 +431,21 @@ h4.see-all {
   #arrow2 {
     left: 225px;
   }
+
+  .keep-on-page {
+    position: absolute;
+    right: 215px;
+  }
+
+  .keep-on-page-clock {
+    position: absolute;
+    right: 225px;
+  }
+}
+
+.reflect {
+  -webkit-box-reflect: below 6px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 }
 
 .artist-songs-container {
