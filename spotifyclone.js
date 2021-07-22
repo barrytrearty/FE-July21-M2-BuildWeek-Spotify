@@ -193,6 +193,105 @@ const album2 = {
   ],
 };
 
+const albumCardInfo = [
+  {
+    artist: "Arctic Monkeys",
+    name: " Whatever People Say I Am, That's What I'm Not",
+    genre: "Indie Rock",
+    releaseDate: 2006,
+    cover: "arctic-monkeys",
+    id: "001",
+  },
+  {
+    artist: "Red Hot Chilli Peppers",
+    name: "Californication",
+    genre: "Alternative Rock",
+    releaseDate: 1999,
+    cover: "californication",
+    id: "002",
+  },
+  {
+    artist: "Dr Dre",
+    name: "The Chronic: 2001",
+    genre: "Hip Hop",
+    releaseDate: 1999,
+    cover: "chronic-dre",
+    id: "003",
+  },
+  {
+    artist: "Tom Waits",
+    name: "Closing Time",
+    genre: "Folk",
+    releaseDate: 1973,
+    cover: "closing-time",
+    id: "004",
+  },
+  {
+    artist: "T-Rex",
+    name: "Electric Warrior",
+    genre: "Glam Rock",
+    releaseDate: 1971,
+    cover: "electric-warrior",
+    id: "005",
+  },
+  {
+    artist: "Eminem",
+    name: "The Eminem Show",
+    genre: "Hip Hop",
+    releaseDate: 2002,
+    cover: "eminem-show",
+    id: "006",
+  },
+  {
+    artist: "Arcade Fire",
+    name: "Funeral",
+    genre: "Indie Rock",
+    releaseDate: 2004,
+    cover: "funeral",
+    id: "007",
+  },
+  {
+    artist: "Kendrick Lamar",
+    name: "Good Kid, M.A.A.D City",
+    genre: "Hip Hop",
+    releaseDate: 2012,
+    cover: "good-kid-mad-city",
+    id: "008",
+  },
+  {
+    artist: "Hozier",
+    name: "Hozier",
+    genre: "Blues",
+    releaseDate: 2014,
+    cover: "hozier",
+    id: "009",
+  },
+  {
+    artist: "Nas",
+    name: "Illmatic",
+    genre: "Hip Hop",
+    releaseDate: 1994,
+    cover: "illimatic",
+    id: "010",
+  },
+  {
+    artist: "Kasabian",
+    name: "West Ryder Pauper Lunatic Asylum",
+    genre: "Indie Rock",
+    releaseDate: 2009,
+    cover: "kasabian",
+    id: "011",
+  },
+  {
+    artist: "The Vaccines",
+    name: " What Did You Expect from The Vaccines?",
+    genre: "Indie Rock",
+    releaseDate: 2011,
+    cover: "vaccines",
+    id: "012",
+  },
+];
+
 const generateAlbumPageJumbotron = function (album, container) {
   let newJumbotron = document.createElement("div");
   newJumbotron.innerHTML = `
@@ -280,6 +379,40 @@ const generateAlbum = function (album) {
   generateTrackList(album);
 };
 
+const seeAllOne = function () {
+  let recentlyPlayedRow = document.getElementById("recently-played-row");
+  let firstSeeAll = document.getElementById("first-see-all");
+  for (i = 0; i < 6; i++) {
+    let newAlbumCard = document.createElement("div");
+    newAlbumCard.classList.add("col", "album-card2", "px-1");
+    newAlbumCard.innerHTML = `<div class="album-card2-cont">
+    <img src="assets/${albumCardInfo[i].cover}.png" alt="">
+    <h5>${albumCardInfo[i].artist}</h5>
+    <p>${albumCardInfo[i].releaseDate} - Album</p><div class="play-button-div">
+    <i class="bi bi-play-circle-fill play-button"></i></div>
+  </div>`;
+    recentlyPlayedRow.appendChild(newAlbumCard);
+    firstSeeAll.remove();
+  }
+};
+
+const seeAllTwo = function () {
+  let recommendedForYou = document.getElementById("recommended-row");
+  let secondSeeAll = document.getElementById("second-see-all");
+  for (i = 6; i < 12; i++) {
+    let newAlbumCard = document.createElement("div");
+    newAlbumCard.classList.add("col", "album-card2", "px-1");
+    newAlbumCard.innerHTML = `<div class="album-card2-cont">
+      <img src="assets/${albumCardInfo[i].cover}.png" alt="">
+      <h5>${albumCardInfo[i].artist}</h5>
+      <p>${albumCardInfo[i].releaseDate} - Album</p><div class="play-button-div">
+      <i class="bi bi-play-circle-fill play-button"></i></div>
+    </div>`;
+    recommendedForYou.appendChild(newAlbumCard);
+    secondSeeAll.remove();
+  }
+};
+
 // const generateNewsAlbum = function () {
 //   window.location.href = "album.html";
 //   let albumJumbotronContainer = document.getElementById(
@@ -289,3 +422,23 @@ const generateAlbum = function (album) {
 //   generateAlbumPageJumbotron(album1, albumJumbotronContainer);
 //   generateTrackList(album1);
 // };
+
+// const albumCards = document.getElementsByClassName("album-card2");
+
+// const addPlayBadge = function () {
+//   let playButton = document.createElement("div");
+//   playButton.classList.add("play-button-div");
+//   playButton.innerHTML = `<i class="bi bi-play-circle-fill play-button"></i></div>`;
+// };
+
+// `<div class="play-button-div">
+//             <i class="bi bi-play-circle-fill play-button"></i></div>
+//           </div>`
+
+// const addPlayBadges = function () {
+//   for (album of albumCards) {
+//     album.addEventListener("mouseover", addPlayBadge);
+//   }
+// };
+
+// addPlayBadges();

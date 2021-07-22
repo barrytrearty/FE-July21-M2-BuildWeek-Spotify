@@ -17,7 +17,7 @@
     />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<!-- <script src="spotifyclone.js"></script> -->
+<script src="spotifyclone.js"></script>
     <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
@@ -178,7 +178,7 @@
       <div class="container-fluid">
         <div class="row title-row mt-3">
           <h2 class="section-heading ml-2">Recently Played</h2>
-          <h4 class="see-all mr-2">SEE ALL</h4>
+          <button id="first-see-all" class="see-all-button" onclick="seeAllOne()"><h4 class="see-all mr-2">SEE ALL</h4></button>
         </div>
       </div>
     </div>
@@ -191,22 +191,28 @@
             <img src="assets/an-awesome-wave.png" alt="">
             <h5>Alt-J</h5>
             <p>1981 - Album</p>
+            <div class="play-button-div">
+            <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
         <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/arctic-monkeys.png" alt="">
-            <h5>Arctic Monkeys</h5>
-            <p>1981 - Album</p>
+            <img src="assets/dogrel.png" alt="">
+            <h5>Fontaines DC</h5>
+            <p>2019 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
          <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/californication.png" alt="">
-            <h5>Californication</h5>
+            <img src="assets/strokes.png" alt="">
+            <h5>The Strokes</h5>
             <p>1981 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
@@ -215,6 +221,8 @@
             <img src="assets/mgmt.png" alt="">
             <h5>MGMT</h5>
             <p>1981 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
@@ -223,6 +231,8 @@
             <img src="assets/nevermind.png" alt="">
             <h5>Nirvana</h5>
             <p>1981 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
@@ -231,10 +241,12 @@
             <img src="assets/nwa.png" alt="">
             <h5>N.W.A.</h5>
             <p>1981 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
-        <div class="col album-card2 px-1">
+        <!-- <div class="col album-card2 px-1">
           <div class="album-card2-cont">
             <img src="assets/radiohead.png" alt="">
             <h5>Radiohead</h5>
@@ -248,7 +260,7 @@
             <h5>Mumford & Sons</h5>
             <p>1981 - Album</p>
           </div>
-        </div>
+        </div> -->
 
       </div>
       
@@ -262,39 +274,46 @@
             Albums we think you'll get hooked on
           </h3>
         </div>
-        <h4 class="see-all mr-2">SEE ALL</h4>
+       <button id="second-see-all" class="see-all-button" onclick="seeAllTwo()"> <h4 class="see-all mr-2">SEE ALL</h4></button>
       </div>
 
       <div id="recommended-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
         <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/strokes.png" alt="">
-            <h5>The Strokes</h5>
-            <p>1981 - Album</p>
+            <img src="assets/grand-corps-malade.png" alt="">
+            <h5>Grand Corps Malade</h5>
+            <p>2011 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
         <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/the-libertines.png" alt="">
-            <h5>The Libertines</h5>
-            <p>1981 - Album</p>
+            <img src="assets/sigh-no-more.png" alt="">
+            <h5>Mumford & Sons</h5>
+            <p>2011 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
          <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/vaccines.png" alt="">
-            <h5>The Vaccines</h5>
-            <p>1981 - Album</p>
+            <img src="assets/radiohead.png" alt="">
+            <h5>OK Computer</h5>
+            <p>1999 - Album</p>
+            <div class="play-button-div">
+              <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
         <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/an-awesome-wave.png" alt="">
-            <h5>Alt-J</h5>
-            <p>1981 - Album</p>
+            <img src="assets/jake-bugg.png" alt="">
+            <h5>Jake Bugg</h5>
+            <p>2015 - Album</p><div class="play-button-div">
+            <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
@@ -302,19 +321,21 @@
           <div class="album-card2-cont">
             <img src="assets/closing-time.png" alt="">
             <h5>Tom Waits</h5>
-            <p>1981 - Album</p>
+            <p>1981 - Album</p><div class="play-button-div">
+            <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
         <div class="col album-card2 px-1">
           <div class="album-card2-cont">
-            <img src="assets/hozier.png" alt="">
+            <img src="assets/vampire-weekend.PNG" alt="">
             <h5>Hozier</h5>
-            <p>1981 - Album</p>
+            <p>1981 - Album</p><div class="play-button-div">
+            <i class="bi bi-play-circle-fill play-button"></i></div>
           </div>
         </div>
 
-        <div class="col album-card2 px-1">
+        <!-- <div class="col album-card2 px-1">
           <div class="album-card2-cont">
             <img src="assets/illimatic.png" alt="">
             <h5>Nas</h5>
@@ -328,12 +349,13 @@
             <h5>Vampire Weekend</h5>
             <p>1981 - Album</p>
           </div>
-        </div>
+        </div> -->
+
       </div>
     </div>
    </div>
 
-   <div class="container-fluid">
+   <div class="container-fluid pb-5">
     <!-- <button class="ml-3 btn btn-dark badge-pill" id="arrow1"> -->
       <button class="ml-3 arrow-btn" id="arrow1">
         <i class="bi bi-chevron-left"></i>
