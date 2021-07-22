@@ -400,7 +400,7 @@ h4.see-all {
   font-size: 0.65rem;
 }
 
-@media (min-width: 547px) {
+@media (min-width: 576px) {
   .main-container {
     margin-left: 175px;
   }
