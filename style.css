@@ -22,13 +22,13 @@
 #play {
   position: absolute;
   top: 1px;
-  left: 55%;
+  left: 50%;
 }
 
 #forward {
   position: absolute;
   top: 2px;
-  left: 63%;
+  left: 10%;
 }
 
 #backwards {
@@ -42,10 +42,6 @@
   position: absolute;
   top: 2px;
   left: 42%;
-
-/* body {
-    background-color: black;
-    color: white;
 }
 
 #repeat {
@@ -56,33 +52,33 @@
 
 #heart {
   position: absolute;
-  top: 2px;
-  left: 130px;
+  top: 13px;
+  left: 180px;
 }
 
 #queue {
   position: absolute;
-  top: 2px;
-  left: 80%;
+  top: 10px;
+  left: 86%;
 }
 
 #device {
   position: absolute;
-  top: 2px;
-  left: 84%;
+  top: 10px;
+  left: 88%;
 }
 
 #volume {
   position: absolute;
-  top: 2px;
+  top: 10px;
   left: 78%;
 }
 
-/* .footer-icons-right {
+.footer-icons-right {
   display: flex;
   flex-direction: row;
   
-} */
+}
 
 progress {
   position: absolute;
@@ -122,6 +118,8 @@ progress::-webkit-progress-bar {
   padding-right: 10px; */
 }
 
+
+
 .holder {
   display: inline;
 }
@@ -141,7 +139,7 @@ progress::-webkit-progress-bar {
   width: 15%;
   max-height: 5px;
   left: 83%;
-  top: 30px;
+  top: 38px;
   background: white;
   border-radius: 50px;
 }
@@ -149,7 +147,7 @@ progress::-webkit-progress-bar {
 .albumname {
   position: absolute;
   top: 15px;
-  left: 80px;
+  left: 90px;
 }
 
 .albumname h4 {
@@ -405,22 +403,22 @@ h4.see-all {
     margin-left: 175px;
   }
   #play {
-    left: 50%;
+    left: 49%;
   }
   #backwards {
-    left: 43%;
+    left: 46%;
   }
   #forward {
-    left: 58%;
+    left: 53%;
   }
   #repeat {
-    left: 63%;
+    left: 56%;
   }
   #shuffle {
-    left: 37%;
+    left: 43%;
   }
   #volume {
-    left: 88%;
+    left: 90%;
   }
   #volumeprogress {
     left: 92%;
@@ -498,7 +496,8 @@ h4.see-all {
   padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid white;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
 }
 
 .dots {
@@ -594,7 +593,35 @@ a:hover {
   color: white;
 }
 
-/* ////////////////////// */
+.morning-card h5 {
+    font-size: 12px;
+}
+
+#populartitle {
+    font-size: 12px;
+}
+
+.table {
+    margin-right: 20px;
+}
+
+.table td {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #e6e7e8;
+}
+
+.albumsong {
+    font-size: 12px;
+}
+
+tr.border_bottom td {
+  border-bottom: 1px solid #2e2e2e;
+}
+
+ /* ////////////////////// 
 
 #loginlogo {
   height: 100px;
@@ -631,7 +658,7 @@ h6.roosa-h6 span {
   padding: 16px 48px 18px;
   border-width: 0;
   letter-spacing: 2px;
-  /* min-width: 140px; */
+
   width: 100%;
   text-transform: uppercase;
   white-space: normal;
@@ -641,11 +668,6 @@ h6.roosa-h6 span {
   padding: 16px 14px 18px;
 }
 
-/* .btn-default {
-  color: #616467;
-  box-shadow: inset 0 0 0 2px #616467;
-  background-color: transparent;
-} */
 
 #terms {
   font-size: 10px;
@@ -711,14 +733,14 @@ h6.roosa-h6 {
 
 .buttons-wrap {
   display: flex;
-  /* justify-content: space-between; */
+  
   max-width: 100%;
 }
 
 .main-container-login {
   margin: auto;
   max-width: 500px;
-}
+} */
 
 .album-jumbo {
   background: rgb(243, 0, 231);
@@ -806,14 +828,11 @@ h6.roosa-h6 {
   margin-right: 2px;
 }
 
-/* .album-summary {
-  flex-direction: row;
-  align-items: flex-end;
-} */
+/*
 
 #divider {
     margin-bottom: 20px;
-} */
+}
 
 #loginlogo {
   height: 100px;
@@ -832,7 +851,7 @@ h6.roosa-h6 {
 }
 
 h6.roosa-h6 span {
-  /* background: #fff; */
+  
   padding: 0 10px;
   background: var(--color-secondary);
     color: var(--font-color);
@@ -844,8 +863,7 @@ h6.roosa-h6 span {
 }
 
 .btn-black {
-  /* color: #fff;
-  background-color: #000; */
+ 
   background: var(--color-tertiary);
     color: var(--color-tertiary);
 }
@@ -857,7 +875,7 @@ h6.roosa-h6 span {
   padding: 16px 48px 18px;
   border-width: 0;
   letter-spacing: 2px;
-  /* min-width: 140px; */
+  
   width: 100%;
   text-transform: uppercase;
   white-space: normal;
@@ -867,11 +885,7 @@ h6.roosa-h6 span {
   padding: 16px 14px 18px;
 }
 
-/* .btn-default {
-  color: #616467;
-  box-shadow: inset 0 0 0 2px #616467;
-  background-color: transparent;
-} */
+
 
 #terms {
   font-size: 10px;
@@ -937,7 +951,7 @@ h6.roosa-h6 {
 
 .buttons-wrap {
   display: flex;
-  /* justify-content: space-between; */
+  
   max-width: 100%;
 }
 
@@ -955,7 +969,7 @@ html, body {
     color: var(--font-color);
   }
   .theme-light {
-    --color-primary: green; /* #0060df; */
+    --color-primary: green; 
     --color-secondary: white;
     --color-tertiary: black;
     --color-accent: #fd6f53;
@@ -988,7 +1002,7 @@ html, body {
     border-radius: 5px;
   }
 
-  .btn {
+  .btn-success {
       color: var(--font-color);
       border: 2px black;
   }
