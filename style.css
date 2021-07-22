@@ -37,15 +37,15 @@
   left: 48%;
 }
 
-
 #shuffle {
   position: absolute;
   top: 2px;
   left: 42%;
+}
 
-/* body {
-    background-color: black;
-    color: white;
+body {
+  background-color: black;
+  color: white;
 }
 
 #repeat {
@@ -78,11 +78,10 @@
   left: 78%;
 }
 
-/* .footer-icons-right {
+.footer-icons-right {
   display: flex;
   flex-direction: row;
-  
-} */
+}
 
 progress {
   position: absolute;
@@ -812,10 +811,9 @@ h6.roosa-h6 {
 } */
 
 #divider {
-    margin-bottom: 20px;
-} */
-
-#loginlogo {
+  margin-bottom: 20px;
+}
+*/ #loginlogo {
   height: 100px;
   width: 180px;
   background: var(--color-secondary);
@@ -828,14 +826,14 @@ h6.roosa-h6 {
   line-height: 0.1em;
   margin: 10px 0 20px;
   background: var(--color-tertiary);
-    color: var(--color-tertiary);
+  color: var(--color-tertiary);
 }
 
 h6.roosa-h6 span {
   /* background: #fff; */
   padding: 0 10px;
   background: var(--color-secondary);
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 .btn-facebook {
@@ -847,7 +845,7 @@ h6.roosa-h6 span {
   /* color: #fff;
   background-color: #000; */
   background: var(--color-tertiary);
-    color: var(--color-tertiary);
+  color: var(--color-tertiary);
 }
 
 .btn.roosa-btn {
@@ -946,50 +944,50 @@ h6.roosa-h6 {
   max-width: 500px;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--color-secondary);
-    color: var(--font-color);
-  }
-  .theme-light {
-    --color-primary: green; /* #0060df; */
-    --color-secondary: white;
-    --color-tertiary: black;
-    --color-accent: #fd6f53;
-    --font-color: #000000;
-  }
-  .theme-dark {
-    --color-primary: #17ed90;
-    --color-secondary: #2b2e2c;
-    --color-tertiary: white;
-    --color-accent: #12cdea;
-    --font-color: #ffffff;
-  }
-  .container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: var(--color-secondary);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .container h1 {
-    color: var(--font-color);
-  }
-  .container button {
-    color: var(--font-color);
-    background: var(--color-primary);
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 5px;
-  }
+.theme-light {
+  --color-primary: green;
+  --color-secondary: white;
+  --color-tertiary: black;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #2b2e2c;
+  --color-tertiary: white;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
 
-  .btn {
-      color: var(--font-color);
-      border: 2px black;
-  }
+body.roosa-body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-secondary);
+  color: var(--font-color);
+}
+.theme-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--color-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.theme-container h1 {
+  color: var(--font-color);
+}
+.theme-container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
 
+.btn {
+  color: var(--font-color);
+  border: 2px black;
+}
