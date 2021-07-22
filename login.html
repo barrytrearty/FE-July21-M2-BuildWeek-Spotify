@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -117,6 +119,35 @@
         </div>
     </div>
 </div></div>
+
+<div class="container">
+        <button id="switch" onclick="toggleTheme()">Switch</button>
+    </div>
+<script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+    </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
