@@ -130,6 +130,60 @@ hr {
   border: 2px solid #34495e;
 }
 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-secondary);
+    color: var(--font-color);
+  }
+
+  .theme-light {
+    --color-primary: #28a745; /* #0060df; */
+    --color-secondary: white;
+    --color-tertiary: black;
+    --color-accent: white;
+    --font-color: #000000;
+    --color-signup: #616467;
+    --color-hr: lightgrey;
+    --color-filter: invert(0%);
+
+  }
+  .theme-dark {
+    --color-primary: #616467;
+    --color-secondary: #262626; /* #2b2e2c; */
+    --color-tertiary: white;
+    --color-accent: black;
+    --font-color: #ffffff;
+    --color-signup: white;
+    --color-hr: #404040;
+    --color-filter: invert(100%);
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container h1 {
+    color: var(--font-color);
+  }
+
+  .container button {
+    color: white;
+    /* background: var(--color-primary); */
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+
 html,
 body {
   margin: 0;
@@ -183,6 +237,7 @@ body {
   border-radius: 5px;
 }
 
+
 .btn-success {
   color: white;
 }
@@ -212,7 +267,7 @@ body {
   font-size: 14px;
   line-height: 1;
   border-radius: 500px;
-  padding: 16px 48px 18px;
+  padding: 16px 48px 16px;
   letter-spacing: 2px;
   min-width: 150px;
   width: 40%;
@@ -220,4 +275,9 @@ body {
   white-space: normal;
   background: var(--color-primary);
   box-shadow: inset 0 0 0 1px var(--color-primary);
+  min-width: 160px;
+}
+
+#loginButton {
+    width: 160px;
 }
