@@ -504,6 +504,17 @@ button.see-all-button {
   /* bottom: 2rem; */
 }
 
+.play-button-bg {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: -0.3rem;
+  right: -0.1rem;
+  z-index: -1;
+  background-color: white;
+}
+
 .table-borderless td {
   color: white;
   font-size: 0.7rem;
