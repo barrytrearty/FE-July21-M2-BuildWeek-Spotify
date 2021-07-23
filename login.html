@@ -17,13 +17,16 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/f3a1c130e3.js" crossorigin="anonymous"></script>
+    <!-- <script src="spotifyclone.js"></script> -->
   </head>
 
   
   <body>
-  <p style="text-align:center;"><img src="https://www.adweek.com/wp-content/uploads/2019/11/Spotify-Logo-Black.png" id="loginlogo" alt="Logo"></p>
+  <p style="text-align:center;"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" id="loginlogo" alt="Logo"></p>
   <hr class = "my-4">
 
 
@@ -57,23 +60,23 @@
     
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div></div>
-   <div class="buttons-wrap"></div>
+    <div class="buttons-wrap">
    <div class="container">
   <div class="row">
-  <div class="col-6">
+  <div class="col-12">
             <label class="checkbox">
               <input ng-model="form.remember" type="checkbox" name="remember" analytics-on="checked" analytics-category="Login View" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
               Remember me
               <span class="control-indicator"></span></label>  </div>
                 
-              <div class="col-6 col-md-12">  
+              <div class="col-12 col-md-12">  
   <a href="home.html"><button type="submit" class="btn roosa-btn btn-success mb-3">LOG IN</button></a>
           </div></div>
    
 
          
          
-           </div>
+           </div></div> 
             </div>
         
                                    <div class="row">
@@ -91,7 +94,7 @@
                                     <div class="divider">
                                     </div>
                                         <p style="text-align:center;"><strong>Don't have an account?</strong></p>
-                                        <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus" class="btn roosa-btn btn-block btn-default ng-binding" role="button" href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus">Sign up for Spotify</a>
+                                        <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus" class="btn signup-btn btn-block btn-default ng-binding" role="button" href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fen%2Fstatus">Sign up for Spotify</a>
                                   
                                    
                                  <hr class="my-4">
@@ -118,10 +121,13 @@
             </div>
         </div>
     </div>
-</div></div>
+</div>
+</div>
+
 
 <div class="theme-container">
-        <button id="switch" onclick="toggleTheme()">Switch</button>
+        <button id="switch" class="btn switch-btn btn-success" onclick="toggleTheme()">Switch</button>
+
     </div>
 <script>
         // function to set a given theme/color-scheme

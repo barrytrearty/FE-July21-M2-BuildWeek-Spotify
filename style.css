@@ -22,13 +22,13 @@
 #play {
   position: absolute;
   top: 1px;
-  left: 55%;
+  left: 50%;
 }
 
 #forward {
   position: absolute;
   top: 2px;
-  left: 63%;
+  left: 10%;
 }
 
 #backwards {
@@ -56,25 +56,25 @@ body {
 
 #heart {
   position: absolute;
-  top: 2px;
-  left: 130px;
+  top: 13px;
+  left: 180px;
 }
 
 #queue {
   position: absolute;
-  top: 2px;
-  left: 80%;
+  top: 10px;
+  left: 86%;
 }
 
 #device {
   position: absolute;
-  top: 2px;
-  left: 84%;
+  top: 10px;
+  left: 88%;
 }
 
 #volume {
   position: absolute;
-  top: 2px;
+  top: 10px;
   left: 78%;
 }
 
@@ -121,6 +121,10 @@ progress::-webkit-progress-bar {
   padding-right: 10px; */
 }
 
+.extra-padding {
+  padding-bottom: 100px;
+}
+
 .holder {
   display: inline;
 }
@@ -140,7 +144,7 @@ progress::-webkit-progress-bar {
   width: 15%;
   max-height: 5px;
   left: 83%;
-  top: 30px;
+  top: 38px;
   background: white;
   border-radius: 50px;
 }
@@ -148,7 +152,7 @@ progress::-webkit-progress-bar {
 .albumname {
   position: absolute;
   top: 15px;
-  left: 80px;
+  left: 90px;
 }
 
 .albumname h4 {
@@ -203,6 +207,7 @@ progress::-webkit-progress-bar {
 }
 
 .album-card2 {
+  position: relative;
   color: white;
   margin-bottom: 0.5rem;
   line-clamp: 2;
@@ -245,6 +250,11 @@ h4.see-all {
   font-weight: 600;
   align-self: center;
   margin-right: 5px;
+}
+
+button.see-all-button {
+  border: none;
+  background-color: rgba(18, 18, 18, 255);
 }
 
 .title-row {
@@ -349,20 +359,6 @@ h4.see-all {
   top: 10px;
 }
 
-/* #boxArrow1 {
-  position: relative;
-  left: 80px;
-  top: 0px;
-  margin-bottom: 2px;
-}
-
-#boxArrow2 {
-  position: relative;
-  left: 8px;
-  top: 0px;
-  margin-bottom: 4px;
-} */
-
 .dropdown-menu {
   background-color: rgba(31, 27, 27);
 }
@@ -403,23 +399,28 @@ h4.see-all {
   .main-container {
     margin-left: 175px;
   }
+
+  .main-container-album {
+    margin-left: 175px;
+  }
+
   #play {
-    left: 50%;
+    left: 49%;
   }
   #backwards {
-    left: 43%;
+    left: 46%;
   }
   #forward {
-    left: 58%;
+    left: 53%;
   }
   #repeat {
-    left: 63%;
+    left: 56%;
   }
   #shuffle {
-    left: 37%;
+    left: 43%;
   }
   #volume {
-    left: 88%;
+    left: 90%;
   }
   #volumeprogress {
     left: 92%;
@@ -440,6 +441,21 @@ h4.see-all {
   #arrow2 {
     left: 225px;
   }
+
+  .keep-on-page {
+    position: absolute;
+    right: 215px;
+  }
+
+  .keep-on-page-clock {
+    position: absolute;
+    right: 225px;
+  }
+}
+
+.reflect {
+  -webkit-box-reflect: below 2px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
 }
 
 .artist-songs-container {
@@ -458,6 +474,45 @@ h4.see-all {
   width: 40px;
   background: #1db954;
   border-radius: 50%;
+}
+
+.spotify-circle:hover {
+  transform: scale(1.1);
+}
+
+.album-card2:hover .play-button-div {
+  transform: translateY(-1rem);
+  opacity: 1;
+}
+
+.play-button-div {
+  opacity: 0;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 6rem;
+  right: 2rem;
+  transition: all 0.5s;
+  /* transition: translateY 0.4s; */
+}
+
+.play-button {
+  color: #1db954;
+  font-size: 2.5rem;
+  /* box-shadow: 2px 3px black; */
+  /* bottom: 2rem; */
+}
+
+.play-button-bg {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: -0.3rem;
+  right: -0.1rem;
+  z-index: -1;
+  background-color: white;
 }
 
 .table-borderless td {
@@ -497,6 +552,11 @@ h4.see-all {
   padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
+  border: 1px solid rgba(231, 228, 228, 0.24);
+  border-radius: 3px;
+}
+
+.follow:hover {
   border: 1px solid white;
 }
 
@@ -512,7 +572,15 @@ h4.see-all {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.473);
+  background: rgba(255, 255, 255, 0.226);
+}
+
+.album-dots:hover .small-circle {
+  background-color: white;
+}
+
+.dots:hover .small-circle {
+  background-color: white;
 }
 
 .artist-song-rows {
@@ -524,6 +592,8 @@ td img {
   width: 20px;
   height: 20px;
   bottom: 5px;
+  margin-left: 10px;
+  margin-right: 2px;
 }
 
 .round-artist {
@@ -593,7 +663,35 @@ a:hover {
   color: white;
 }
 
-/* ////////////////////// */
+.morning-card h5 {
+  font-size: 12px;
+}
+
+#populartitle {
+  font-size: 12px;
+}
+
+.table {
+  margin-right: 20px;
+}
+
+.table td {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #e6e7e8;
+}
+
+.albumsong {
+  font-size: 12px;
+}
+
+tr.border_bottom td {
+  border-bottom: 1px solid #2e2e2e;
+}
+
+/* ////////////////////// 
 
 #loginlogo {
   height: 100px;
@@ -630,7 +728,7 @@ h6.roosa-h6 span {
   padding: 16px 48px 18px;
   border-width: 0;
   letter-spacing: 2px;
-  /* min-width: 140px; */
+
   width: 100%;
   text-transform: uppercase;
   white-space: normal;
@@ -640,11 +738,6 @@ h6.roosa-h6 span {
   padding: 16px 14px 18px;
 }
 
-/* .btn-default {
-  color: #616467;
-  box-shadow: inset 0 0 0 2px #616467;
-  background-color: transparent;
-} */
 
 #terms {
   font-size: 10px;
@@ -710,23 +803,23 @@ h6.roosa-h6 {
 
 .buttons-wrap {
   display: flex;
-  /* justify-content: space-between; */
+  
   max-width: 100%;
 }
 
 .main-container-login {
   margin: auto;
   max-width: 500px;
-}
+} */
 
 .album-jumbo {
   background: rgb(243, 0, 231);
   background: rgb(243, 0, 231);
   background: linear-gradient(
-    180deg,
-    rgba(230, 108, 155, 0.479) 13%,
-    rgba(177, 5, 162, 0.712) 25%,
-    rgb(136, 4, 134) 50%,
+    200deg,
+    rgba(173, 6, 98, 0.518) 13%,
+    rgba(194, 3, 187, 0.541) 25%,
+    rgba(136, 4, 134, 0.71) 50%,
     rgba(81, 3, 95, 0.72) 75%
   );
   background-size: 100%;
@@ -805,15 +898,7 @@ h6.roosa-h6 {
   margin-right: 2px;
 }
 
-/* .album-summary {
-  flex-direction: row;
-  align-items: flex-end;
-} */
-
-#divider {
-  margin-bottom: 20px;
-}
-*/ #loginlogo {
+#loginlogo {
   height: 100px;
   width: 180px;
   background: var(--color-secondary);
@@ -830,7 +915,6 @@ h6.roosa-h6 {
 }
 
 h6.roosa-h6 span {
-  /* background: #fff; */
   padding: 0 10px;
   background: var(--color-secondary);
   color: var(--font-color);
@@ -842,8 +926,6 @@ h6.roosa-h6 span {
 }
 
 .btn-black {
-  /* color: #fff;
-  background-color: #000; */
   background: var(--color-tertiary);
   color: var(--color-tertiary);
 }
@@ -855,7 +937,7 @@ h6.roosa-h6 span {
   padding: 16px 48px 18px;
   border-width: 0;
   letter-spacing: 2px;
-  /* min-width: 140px; */
+
   width: 100%;
   text-transform: uppercase;
   white-space: normal;
@@ -864,12 +946,6 @@ h6.roosa-h6 span {
 .btn.roosa-btn {
   padding: 16px 14px 18px;
 }
-
-/* .btn-default {
-  color: #616467;
-  box-shadow: inset 0 0 0 2px #616467;
-  background-color: transparent;
-} */
 
 #terms {
   font-size: 10px;
@@ -935,13 +1011,61 @@ h6.roosa-h6 {
 
 .buttons-wrap {
   display: flex;
-  /* justify-content: space-between; */
+
   max-width: 100%;
 }
 
 .main-container-login {
   margin: auto;
   max-width: 500px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-secondary);
+  color: var(--font-color);
+}
+.theme-light {
+  --color-primary: green;
+  --color-secondary: white;
+  --color-tertiary: black;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #2b2e2c;
+  --color-tertiary: white;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--color-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h1 {
+  color: var(--font-color);
+}
+.container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn-success {
+  color: var(--font-color);
+  border: 2px black;
 }
 
 .theme-light {
