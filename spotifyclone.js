@@ -295,14 +295,14 @@ const albumCardInfo = [
 const generateAlbumPageJumbotron = function (album, container) {
   let newJumbotron = document.createElement("div");
   newJumbotron.innerHTML = `
-  <div class="jumbotron jumbotron-fluid img-fluid album-jumbo">
+  <div class="jumbotron jumbotron-fluid img-fluid album-jumbo pb-5">
     <div class="for-about-album">
-      <img class="shadow-lg d-none d-sm-inline" src="assets/${album.albumCover}" alt="">
+      <img class="shadow-lg d-none d-sm-inline reflect" src="assets/${album.albumCover}" alt="">
       <div class="mt-3 mt-sm-0">
         <p><strong>ALBUM</strong> </p>
         <h1 class="album-title-jumbo">${album.name}</h1>
         
-        <p class="album-summary"><img class="round-artist1" src="assets/mgmt.png" alt=""><strong> ${album.artist}</strong><i class="bi bi-dot"></i>2018<i class="bi bi-dot"></i>${album.duration}</p>
+        <p class="album-summary"><img class="round-artist1 reflect" src="assets/mgmt.png" alt=""><strong> ${album.artist}</strong><i class="bi bi-dot"></i>2018<i class="bi bi-dot"></i>${album.duration}</p>
       </div>
     </div>
    
@@ -370,14 +370,51 @@ const generateTrackList = function (album) {
 
 // let albumName;
 
+//ORIGINAL FUNCTION
+////////////////////////////////
+
+// const generateAlbum = function (album) {
+//   let albumJumbotronContainer = document.getElementById(
+//     "album-jumbotron-container"
+//   );
+//   let albumTableContainerDiv = document.getElementById(
+//     "album-table-container-div"
+//   );
+//   albumJumbotronContainer.innerHTML = "";
+//   albumTableContainerDiv.innerHTML = "";
+//   //   console.log(albumJumbotronContainer);
+//   generateAlbumPageJumbotron(album, albumJumbotronContainer);
+//   generateTrackList(album);
+// };
+////////////////////////////////
+
+//QUERY STRING FUNCTION
+//////////////////////////////////
+
+const getQueryString = function () {
+  let currentUrl = window.location.href.toString();
+  let albumString = currentUrl.slice(-6);
+  return albumString;
+};
+
 const generateAlbum = function (album) {
   let albumJumbotronContainer = document.getElementById(
     "album-jumbotron-container"
   );
+  let albumTableContainerDiv = document.getElementById(
+    "album-table-container-div"
+  );
+  albumJumbotronContainer.innerHTML = "";
+  if (queryString === "album1") {
+    generateAlbum(album1);
+  }
+  albumTableContainerDiv.innerHTML = "";
   //   console.log(albumJumbotronContainer);
   generateAlbumPageJumbotron(album, albumJumbotronContainer);
   generateTrackList(album);
 };
+
+////////////////////////////////////
 
 const seeAllOne = function () {
   let recentlyPlayedRow = document.getElementById("recently-played-row");
@@ -388,7 +425,7 @@ const seeAllOne = function () {
     newAlbumCard.innerHTML = `<div class="album-card2-cont">
     <img src="assets/${albumCardInfo[i].cover}.png" alt="">
     <h5>${albumCardInfo[i].artist}</h5>
-    <p>${albumCardInfo[i].releaseDate} - Album</p><div class="play-button-div">
+    <p>${albumCardInfo[i].releaseDate} - Album</p><div class="play-button-div"><div class="play-button-bg"></div>
     <i class="bi bi-play-circle-fill play-button"></i></div>
   </div>`;
     recentlyPlayedRow.appendChild(newAlbumCard);
@@ -405,12 +442,53 @@ const seeAllTwo = function () {
     newAlbumCard.innerHTML = `<div class="album-card2-cont">
       <img src="assets/${albumCardInfo[i].cover}.png" alt="">
       <h5>${albumCardInfo[i].artist}</h5>
-      <p>${albumCardInfo[i].releaseDate} - Album</p><div class="play-button-div">
+      <p>${albumCardInfo[i].releaseDate} - Album</p><div class="play-button-div"><div class="play-button-bg"></div>
       <i class="bi bi-play-circle-fill play-button"></i></div>
     </div>`;
     recommendedForYou.appendChild(newAlbumCard);
     secondSeeAll.remove();
   }
+};
+
+const seeMore = function () {
+  let artistBody = document.getElementById("artist-body");
+  let seeButton = document.getElementById("artist-row-see");
+  artistBody.innerHTML += ` <tr>
+  <td scope="row">6</td>
+  <td><img src="assets/grand-corps-malade.png" alt=""></td>
+  <td id="populartitle">I Want to Break Free- Single</td>
+  <td>380,944,996</td>
+  <td>4.18</td>
+</tr>
+<tr>
+  <td scope="row">7</td>
+  <td><img src="assets/nevermind.png" alt=""></td>
+  <td id="populartitle">We Are The Champions - Remastered 2011</td>
+  <td>420,934,236</td>
+  <td>2.59</td>
+</tr>
+<tr>
+  <td scope="row">8</td>
+  <td><img src="assets/nwa.png" alt=""></td>
+  <td id="populartitle">Crazy Little Thing Called Love - 2011</td>
+  <td>374,499,187</td>
+  <td>2.43</td>
+</tr>
+<tr>
+  <td scope="row">9</td>
+  <td><img src="assets/vampire-weekend.PNG" alt=""></td>
+  <td id="populartitle">Radio Gaga- Single</td>
+  <td>318,743,281</td>
+  <td>5.48</td>
+</tr>
+<tr>
+  <td scope="row">10</td>
+  <td><img src="assets/vaccines.png" alt=""></td>
+  <td id="populartitle">Somebody To Love - Remastered</td>
+  <td>558,434,487</td>
+  <td>4.56</td>
+</tr>`;
+  seeButton.remove();
 };
 
 // const generateNewsAlbum = function () {
