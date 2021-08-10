@@ -519,4 +519,79 @@ const seeMore = function () {
 //   }
 // };
 
-// addPlayBadges();
+// addPlayBadges();#
+
+////////////////////////////////////////////////////////
+
+let generatedAlbumRow = document.getElementById("generated-album-row");
+let generatedAlbumTable = document.getElementById("generated-album-table");
+
+const listAlbums = function (artist) {
+  let lastTable = document.getElementsByClassName("generatedTable")[0];
+  if (lastTable) {
+    lastTable.remove();
+  }
+  let albumTable = document.createElement("table");
+  albumTable.classList.add(
+    "table",
+    "table-borderless",
+    "ml-3",
+    "generatedTable"
+  );
+  for (i = 0; i < artist.length; i++) {
+    let generatedSongRow = document.createElement("tr");
+    generatedSongRow.innerHTML = `<td scope="row" class="align-middle"> ${
+      i + 1
+    }</td> <td><div class="albumsong"><strong>${
+      artist[i].album.title
+    }</strong></div> <div class="artist-name">${
+      artist[i].artist.name
+    }</div> </td>
+        
+        <td class="align-middle keep-on-page">${artist[i].duration}</td>`;
+    albumTable.appendChild(generatedSongRow);
+  }
+  generatedAlbumTable.appendChild(albumTable);
+};
+
+const generateJsArtistCards = function (object) {
+  let newGeneratedCard = document.createElement("div");
+  newGeneratedCard.classList.add("col", "album-card2", "px-1");
+  newGeneratedCard.innerHTML = `<div class="album-card2-cont" onClick="listAlbums(${object})">
+  <img src="${object[0].artist.picture_big}" alt="">
+  <h5>${object[0].artist.name}</h5>
+  <p>Artist</p><div class="play-button-div">
+    <div class="play-button-bg"></div>
+  <i class="bi bi-play-circle-fill play-button"></i></div>
+</div>`;
+  generatedAlbumRow.appendChild(newGeneratedCard);
+};
+
+// const createListAlbumButton = function (artist) {
+//   let createdAlbumButton = document.createElement("button");
+//   createdAlbumButton.classList.add("button-class");
+//   createdAlbumButton.onclick = `listAlbums(${artist})`;
+//   createdAlbumButton.innerText = "Track List";
+//   generatedAlbumTable.appendChild(createdAlbumButton);
+// };
+
+const generateJsArtist = function (artist) {
+  return fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${artist}`, {
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "58eb3e9c2amsh5fd41210fbeac96p1bb7bcjsn83e742160779",
+      "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+    },
+  })
+    .then((response) => response.json())
+    .then((album) => {
+      console.log(album.data);
+      generateJsArtistCards(album.data);
+      listAlbums(album.data);
+    })
+    .catch((error) => console.error(error));
+};
+
+generateJsArtist(`eminem`);
+generateJsArtist(`metallica`);
+generateJsArtist(`behemoth`);
