@@ -17,25 +17,6 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <script>
-      window.onload = () => {
-        let artistObject = ""
-        fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
-	method: "GET",
-	headers: {
-		"x-rapidapi-key": "ee2d36b39fmsh97cf1f56660e250p12cdf8jsn85080d3b2768",
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-        }
-        })
-        .then(response) => {
-          console.log(response)
-          return response.json()
-        }).then((jsonRes) => {
-          console.log(jsonRes);
-          jsonRes.data
-        })
-      }
-    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 <script src="spotifyclone.js"></script>
@@ -229,7 +210,7 @@
     <!-- RECENTLY PLAYED  -->
     <div class="container-fluid">
       <div id="recently-played-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 ml-2 mr-1">
-        <!-- <div id="recently-played-row" class="row row-cols-2">
+        <!-- <div id="recently-played-row" class="row row-cols-2"> -->
         <div class="col album-card2 px-1">
           <div class="album-card2-cont">
             <img src="assets/an-awesome-wave.png" alt="">
@@ -296,7 +277,7 @@
           </div>
         </div>
 
-         <div class="col album-card2 px-1">
+         <!-- <div class="col album-card2 px-1">
           <div class="album-card2-cont">
             <img src="assets/radiohead.png" alt="">
             <h5>Radiohead</h5>
