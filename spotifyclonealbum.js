@@ -1,5 +1,7 @@
 "strict mode";
 
+
+
 const album1 = {
   name: "Bohemian Rhapsody (The Original Soundtrack)",
   artist: "Queen",
@@ -304,3 +306,5 @@ const choosePage = function () {
 };
 
 choosePage();
+
+
