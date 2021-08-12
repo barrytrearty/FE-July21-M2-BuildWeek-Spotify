@@ -307,7 +307,7 @@
         </div>
        <button id="second-see-all" class="see-all-button" onclick="seeAllTwo()"> <h4 class="see-all mt-5 mr-5">SEE ALL</h4></button>
       </div>
-<div class="card-group">
+<div >
       <div id="recommended-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 ml-2 mr-1">
         <div class="col album-card2 px-1">
           <div class="album-card2-cont" id="corps">
@@ -402,19 +402,24 @@
         Dynamically generated from an API.
       </h3>
     </div>
-   <button id="generate-js-album" class="see-all-button" > <h4 class="see-all mt-5 mr-5" onclick="generateJsArtist(`eminem`);">SEE ALL</h4></button>
+   <button class="see-all-button" > <h4 class="see-all mt-5 mr-5" onclick="generateJsArtistAndAlbums(`eminem`, `albums`)">SEE ALL</h4></button>
   </div>
 
-  <div class="card-group">
-    <div id="generated-album-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 ml-2 mr-1"> 
-
+  
+    <div id="generated-artist-row" class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 ml-2 mr-1">
+    
+      <!-- ARTIST CARDS GO IN HERE -->
+      
     </div>
-    <div id="generated-album-table"></div>
-  </div>
 
 </div>
 
+<div  class="container-fluid">
+  
+  <div id="generated-album-row">
+    </div>
 </div>
+
    <div class="container-fluid pb-5">
     <!-- <button class="ml-3 btn btn-dark badge-pill" id="arrow1"> -->
       <button class="ml-3 arrow-btn" id="arrow1">
