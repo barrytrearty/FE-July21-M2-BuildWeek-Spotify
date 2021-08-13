@@ -1,5 +1,7 @@
 "strict mode";
 
+
+
 const album1 = {
   name: "Bohemian Rhapsody (The Original Soundtrack)",
   artist: "Queen",
@@ -306,6 +308,7 @@ const choosePage = function () {
 choosePage();
 
 
+feature-fetchAPI
 function searchAlbums (album) {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${album}`, {
    method: "GET", 
@@ -321,3 +324,4 @@ function searchAlbums (album) {
      console.error(error)
    })
  }
+
