@@ -519,4 +519,92 @@ const seeMore = function () {
 //   }
 // };
 
-// addPlayBadges();
+// addPlayBadges();#
+
+////////////////////////////////////////////////////////
+//NEW SECTION USING FETCH API
+
+let generatedArtistRow = document.getElementById("generated-artist-row");
+let generatedAlbumRow = document.getElementById("generated-album-row");
+
+// Gave this TWO parameters so it can do two different things depending on what is needed
+const generateJsArtistAndAlbums = function (artistName, action) {
+  return fetch(
+    `https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistName}`,
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "58eb3e9c2amsh5fd41210fbeac96p1bb7bcjsn83e742160779",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+      },
+    }
+  )
+    .then((response) => response.json())
+    .then((artistArray) => {
+      console.log(artistArray.data);
+      if (action === "artist") generateJsArtistCards(artistArray.data);
+      if (action === "albums") listAlbums(artistArray.data);
+    })
+    .catch((error) => console.error(error));
+};
+
+const listAlbums = function (object) {
+  generatedAlbumRow.innerHTML = "";
+
+  //Create artist title
+  let artistTitleDiv = document.createElement("div");
+  artistTitleDiv.classList.add("row", "title-row", "mt-3", "ml-3");
+  artistTitleDiv.innerHTML = `<h2 class="section-heading">${object[0].artist.name}</h2>`;
+  generatedAlbumRow.appendChild(artistTitleDiv);
+
+  //Create row for albums
+  let newGeneratedAlbumDiv = document.createElement("div");
+  newGeneratedAlbumDiv.classList.add(
+    "row",
+    "row-cols-2",
+    "row-cols-sm-3",
+    "row-cols-md-4",
+    "row-cols-lg-6",
+    "ml-2",
+    "mr-1",
+    "generatedAlbumDiv"
+  );
+
+  //Create album cols
+  for (i = 0; i < object.length; i++) {
+    let newGeneratedAlbumCard = document.createElement("div");
+    newGeneratedAlbumCard.classList.add("col", "album-card2", "px-1");
+    newGeneratedAlbumCard.innerHTML = `<div class="album-card2-cont generatedCard" >
+    <img src="${object[i].album.cover_big}" alt="">
+    <h5>${object[i].artist.name}</h5>
+    <p>${object[i].title}</p><div class="play-button-div">
+      <div class="play-button-bg"></div>
+    <i class="bi bi-play-circle-fill play-button"></i></div>
+  </div>`;
+    newGeneratedAlbumDiv.appendChild(newGeneratedAlbumCard);
+  }
+  generatedAlbumRow.appendChild(newGeneratedAlbumDiv);
+};
+
+const generateJsArtistCards = function (object) {
+  let newGeneratedCard = document.createElement("div");
+  newGeneratedCard.classList.add("col", "album-card2", "px-1");
+  console.log(object[0].artist.name.toLowerCase());
+  // Found it difficult to inserts back ticks into js generated html code but eventually got it working using these params
+  let firstParam = "`" + object[0].artist.name.toLowerCase() + "`";
+  let secondParam = "`albums`";
+  newGeneratedCard.innerHTML = `<div class="album-card2-cont generatedCard" onclick="generateJsArtistAndAlbums(${firstParam}, ${secondParam})">
+  <img src="${object[0].artist.picture_big}" alt="">
+  <h5>${object[0].artist.name}</h5>
+  <p>Artist</p><div class="play-button-div">
+    <div class="play-button-bg"></div>
+  <i class="bi bi-play-circle-fill play-button"></i></div>
+</div>`;
+  generatedArtistRow.appendChild(newGeneratedCard);
+};
+
+generateJsArtistAndAlbums(`eminem`, "artist");
+generateJsArtistAndAlbums(`metallica`, "artist");
+generateJsArtistAndAlbums(`behemoth`, "artist");
+
+// listAlbums("eminem");

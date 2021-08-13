@@ -1,5 +1,3 @@
-
-
 /* html {
     font-family: 'Poppins';
 }
@@ -9,12 +7,12 @@
 }
 */
 .album-body {
-    font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
 }
 
 .artist-body {
-    font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
 }
 
@@ -24,7 +22,6 @@
   /* padding-left: 10px;
   padding-right: 10px; */
 }
-
 
 /* .extra-padding {
   padding-bottom: 100px;
@@ -42,7 +39,7 @@
 
 .home-body {
   background-color: rgba(18, 18, 18, 255);
-  font-family: 'Poppins'; /* Arial, Helvetica, sans-serif; */
+  font-family: "Poppins"; /* Arial, Helvetica, sans-serif; */
 }
 
 .section-heading {
@@ -67,11 +64,11 @@
 }
 
 .album-card2-cont {
-    background-color: rgba(31, 27, 27, 0.849);
-    padding: 0.5rem;
-    border-radius: 2%;
-    width: 90%;
-    margin-top: 10px;
+  background-color: rgba(31, 27, 27, 0.849);
+  padding: 0.5rem;
+  border-radius: 2%;
+  width: 90%;
+  margin-top: 10px;
 }
 
 .album-card2 img {
@@ -104,11 +101,11 @@
 }
 
 #fontaines {
-    padding-bottom: 11px;
+  padding-bottom: 11px;
 }
 
 #corps {
-    padding-bottom: 11px;
+  padding-bottom: 11px;
 }
 
 h4.see-all {
@@ -154,8 +151,9 @@ button.see-all-button {
   background-color: rgba(55, 55, 55, 0.267);
 }
 
-.pr-1, .px-1 {
-    padding-right: 0.1rem!important;
+.pr-1,
+.px-1 {
+  padding-right: 0.1rem !important;
 }
 
 .sidebar-container {
@@ -202,7 +200,7 @@ button.see-all-button {
 }
 
 #dropdownMenuButton {
-    width: 120px;
+  width: 120px;
 }
 
 #profilePic {
@@ -363,7 +361,7 @@ button.see-all-button {
 }
 
 .morning-card:hover .play-button-div2 {
-  transform: translateY(-0,5rem);
+  transform: translateY(-0, 5rem);
   opacity: 1;
 }
 
@@ -497,8 +495,9 @@ td img {
   margin-right: 2px;
 }
 
-.table td, .table th {
-padding-right: 0px;
+.table td,
+.table th {
+  padding-right: 0px;
 }
 
 .round-artist {
@@ -582,36 +581,36 @@ a:hover {
 }
 
 #populartitlenumber {
-    width: 30px;
-    padding-left: 20px;
-    padding-bottom: 10px;
+  width: 30px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 #popularcover {
-    width: 20px;
-    padding-right: 10px;
+  width: 20px;
+  padding-right: 10px;
 }
 
 #popularplays {
-    color: lightgrey;
-    font-size: 11px;
+  color: lightgrey;
+  font-size: 11px;
 }
 
 #popularlenght {
-    color: lightgrey;
-    font-size: 11px;
+  color: lightgrey;
+  font-size: 11px;
 }
 
 #bestOf {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 #playlist {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 #postedBy {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .table {
@@ -635,7 +634,7 @@ tr.border_bottom td {
 }
 
 #footercover {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* ////////////////////// 
@@ -758,7 +757,6 @@ h6.roosa-h6 {
   margin: auto;
   max-width: 500px;
 } */
-
 
 .album-jumbo {
   background: rgb(243, 0, 231);
@@ -932,10 +930,9 @@ progress {
   justify-content: flex-start;
 }
 
-
 .playbar .card-text {
-    color: lightgrey;
-    font-size: 15px;
+  color: lightgrey;
+  font-size: 15px;
 }
 
 /* #footercover {
@@ -949,33 +946,33 @@ progress {
   max-width: 100%;
 ======= */
 #minute1 {
-    color: lightgrey;
-    font-size: 13px;
+  color: lightgrey;
+  font-size: 13px;
 }
 
 #minute2 {
-    color: lightgrey;
-    font-size: 13px;
+  color: lightgrey;
+  font-size: 13px;
 }
 
 #footerAlbum {
-    color: white;
-    font-size: 13px;
+  color: white;
+  font-size: 13px;
 }
 
 #footerArtist {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .subheading-recommended {
-    font-size: 11px;
-    color: lightgrey;
+  font-size: 11px;
+  color: lightgrey;
 }
 
 .section-heading1 {
-    color: white;
-    font-size: 23px;
-    font-weight: 700;
-    margin-left: 1px;
-    margin-top: 20px;
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  margin-left: 1px;
+  margin-top: 20px;
 }
