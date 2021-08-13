@@ -304,3 +304,20 @@ const choosePage = function () {
 };
 
 choosePage();
+
+
+function searchAlbums (album) {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${album}`, {
+   method: "GET", 
+
+ })
+ .then((response) =>{
+   return response.json()
+ })
+ .then(album => {
+   console.log(album)
+ })
+ .catch(error =>{
+     console.error(error)
+   })
+ }

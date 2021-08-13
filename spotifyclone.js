@@ -603,8 +603,25 @@ const generateJsArtistCards = function (object) {
   generatedArtistRow.appendChild(newGeneratedCard);
 };
 
-generateJsArtistAndAlbums(`eminem`, "artist");
-generateJsArtistAndAlbums(`metallica`, "artist");
-generateJsArtistAndAlbums(`behemoth`, "artist");
+// generateJsArtistAndAlbums(`eminem`, "artist");
+// generateJsArtistAndAlbums(`metallica`, "artist");
+// generateJsArtistAndAlbums(`behemoth`, "artist");
 
 // listAlbums("eminem");
+
+
+function searchAlbums (album) {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${album}`, {
+   method: "GET", 
+
+ })
+ .then((response) =>{
+   return response.json()
+ })
+ .then(album => {
+   console.log(album)
+ })
+ .catch(error =>{
+     console.error(error)
+   })
+ }
