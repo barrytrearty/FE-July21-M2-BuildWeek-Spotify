@@ -603,8 +603,123 @@ const generateJsArtistCards = function (object) {
   generatedArtistRow.appendChild(newGeneratedCard);
 };
 
-generateJsArtistAndAlbums(`eminem`, "artist");
-generateJsArtistAndAlbums(`metallica`, "artist");
-generateJsArtistAndAlbums(`behemoth`, "artist");
+// generateJsArtistAndAlbums(`eminem`, "artist");
+// generateJsArtistAndAlbums(`metallica`, "artist");
+// generateJsArtistAndAlbums(`behemoth`, "artist");
 
-// listAlbums("eminem");
+/////////////////////////////////////////////////////////
+//Friday Team Project - Artist Page Code
+
+let top5tracks = [];
+let objectVariable;
+
+// function searchAlbums(album) {
+//   fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${album}`, {
+//     method: "GET",
+//   })
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((album) => {
+//       console.log(album);
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// }
+
+const getDataForArtistPage = function (artistId) {
+  return (
+    fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`
+      // `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=70`
+      // `https://striveschool-api.herokuapp.com/api/deezer/search?q=queen`
+    )
+      .then((response) => response.json())
+      .then((artistObject) => {
+        // console.log(artistObject);
+        objectVariable = artistObject;
+        displayJumboTron(objectVariable);
+        return fetch(
+          `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=70`
+          // `https://striveschool-api.herokuapp.com/api/deezer/search?q=${objectVariable.name.toLowerCase()}`
+        )
+          .then((response) => response.json())
+          .then((artistFinal) => {
+            console.log(objectVariable);
+            console.log(artistFinal.data);
+            top5tracks = artistFinal.data;
+            console.log(top5tracks);
+            displayTopTracks(top5tracks);
+            return fetch(
+              `https://striveschool-api.herokuapp.com/api/deezer/search?q=${objectVariable.name.toLowerCase()}`
+            )
+              .then((response) => response.json())
+              .then((popularFinal) => {
+                console.log(popularFinal.data);
+                displayPopularReleases(popularFinal.data);
+              });
+          });
+
+        // top5tracks = artistArray;
+        // top5tracks = artistFinal.data;
+        // console.log(top5tracks);
+        // displayTopTracks(top5tracks);
+      })
+      // .then((artistObject) => artistObject.tracklist.json())
+      // .then((tracklist) => console.log(tracklist))
+      .catch((error) => console.error(error))
+  );
+};
+
+const displayTopTracks = function (tracksArray) {
+  // tracksArray.forEach((trackObject) => {
+  //   let newTrackRow = document.createElement("tr");
+  //   newTrackRow.innerHTML = ` <td  scope="row">${trackObject.title}</td>
+  //   <td ><img src="${trackObject.album.cover}" alt=""></td>
+  //   <td >${trackObject.title}</td>
+  //   <td >1,012,332,444</td>
+  //   <td >${trackObject.duration / 100}</td>`;
+  // });
+  let tableBodyForArtistPage = document.getElementById("artist-body");
+  for (i = 0; i < tracksArray.length; i++) {
+    let newTrackRow = document.createElement("tr");
+    newTrackRow.innerHTML = ` <td  scope="row">${i + 1}</td>
+    <td ><img src="${tracksArray[i].album.cover}" alt=""></td>
+    <td >${tracksArray[i].title}</td>
+    <td >1,012,332,444</td>
+    <td >${tracksArray[i].duration / 100}</td>`;
+    tableBodyForArtistPage.appendChild(newTrackRow);
+  }
+};
+
+const displayJumboTron = function (object) {
+  let jumbotronCont = document.getElementById("jumbotron-cont");
+  let jumbotronBg = document.createElement("div");
+  jumbotronBg.innerHTML = `<div class="jumbotron jumbotron-fluid img-fluid artists-jumbo" style="background-image: url(${object.picture_big}); background-size: 100%; background-position: top; ">
+<div class="container for-about">
+  <p class="ml-auto text-white pt-5 pt-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" color="#0084b4" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </svg> Verified artist</p>
+<h1 class="display-4 text-white" style="font-weight: bolder;">${object.name}</h1>
+<p class="lead text-white pb-3">37,120,733 monthly listeners.</p>
+</div>
+
+</div`;
+  jumbotronCont.appendChild(jumbotronBg);
+};
+
+const displayPopularReleases = function (array) {
+  let popularReleaseRow = document.getElementById("popular-release-row");
+  for (i = 0; i < array.length; i++) {
+    let newAlbumTile = document.createElement("div");
+    newAlbumTile.classList.add("col", "album-card2", "px-1");
+    newAlbumTile.innerHTML = `<div id="news-album-card" class="album-card2-cont">
+    <img src="${array[i].album.cover_big}" alt="">
+    <h5>${array[i].album.title}</h5>
+    <p>1977 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
+      <i class="bi bi-play-circle-fill play-button"></i></div>
+  </div>`;
+    popularReleaseRow.appendChild(newAlbumTile);
+  }
+};
