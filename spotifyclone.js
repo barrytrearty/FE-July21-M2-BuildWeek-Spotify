@@ -1,197 +1,197 @@
 "strict mode";
 
-const album1 = {
-  name: "Bohemian Rhapsody (The Original Soundtrack)",
-  artist: "Queen",
-  year: "2018",
-  albumCover: "electric-warrior.png",
-  duration: "22 Songs, 1 hr 19 min",
-  songList: [
-    {
-      title: "20th Century Fox Fanfare",
-      songDuration: "0.25",
-      songArtist: "Queen",
-    },
-    {
-      title: "Somebody to Love",
-      songDuration: "4.56",
-      songArtist: "Queen",
-    },
+// const album1 = {
+//   name: "Bohemian Rhapsody (The Original Soundtrack)",
+//   artist: "Queen",
+//   year: "2018",
+//   albumCover: "electric-warrior.png",
+//   duration: "22 Songs, 1 hr 19 min",
+//   songList: [
+//     {
+//       title: "20th Century Fox Fanfare",
+//       songDuration: "0.25",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Somebody to Love",
+//       songDuration: "4.56",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Doing All Right... Revisited",
-      songDuration: "3.17",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Doing All Right... Revisited",
+//       songDuration: "3.17",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Keep Yourself Alive",
-      songDuration: "3.56",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Keep Yourself Alive",
+//       songDuration: "3.56",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Killer Queen",
-      songDuration: "2.59",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Killer Queen",
+//       songDuration: "2.59",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Fat Bottomed Girls",
-      songDuration: "4.38",
-      songArtist: "Queen",
-    },
-    {
-      title: "Bohemian Rhapsody",
-      songDuration: "5.55",
-      songArtist: "Queen",
-    },
-    {
-      title: "Now I'm Here",
-      songDuration: "4.26",
-      songArtist: "Queen",
-    },
-    {
-      title: "Crazy Little Thing Called Love",
-      songDuration: "2.43",
-      songArtist: "Queen",
-    },
-    {
-      title: "Love of My Life",
-      songDuration: "4.29",
-      songArtist: "Queen",
-    },
-    {
-      title: "We Will Rock You",
-      songDuration: "2.09",
-      songArtist: "Queen",
-    },
-    {
-      title: "Another One Bites the Dust",
-      songDuration: "3.35",
-      songArtist: "Queen",
-    },
-    {
-      title: "I Want to Break Free",
-      songDuration: "3.43",
-      songArtist: "Queen",
-    },
-    {
-      title: "Under Pressure",
-      songDuration: "4.04",
-      songArtist: "Queen feat. David Bowie",
-    },
-    {
-      title: "Who Wants to Live Forever",
-      songDuration: "5.15",
-      songArtist: "Queen",
-    },
-    {
-      title: "Bohemian Rhapsody(Live)",
-      songDuration: "2.28",
-      songArtist: "Queen",
-    },
-    {
-      title: "Radio Ga Ga",
-      songDuration: "4:06",
-      songArtist: "Queen",
-    },
-    {
-      title: "Ay-Oh",
-      songDuration: "0:41",
-      songArtist: "Queen",
-    },
-    {
-      title: "Hammer to Fall",
-      songDuration: "4:04",
-      songArtist: "Queen",
-    },
-    {
-      title: "We Are the Champions",
-      songDuration: "3:57",
-      songArtist: "Queen",
-    },
-    {
-      title: "Don't Stop Me Now... Revisited",
-      songDuration: "3:38",
-      songArtist: "Queen",
-    },
-    {
-      title: "The Show Must Go On",
-      songDuration: "4:32",
-      songArtist: "Queen",
-    },
-  ],
-};
+//     {
+//       title: "Fat Bottomed Girls",
+//       songDuration: "4.38",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Bohemian Rhapsody",
+//       songDuration: "5.55",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Now I'm Here",
+//       songDuration: "4.26",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Crazy Little Thing Called Love",
+//       songDuration: "2.43",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Love of My Life",
+//       songDuration: "4.29",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "We Will Rock You",
+//       songDuration: "2.09",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Another One Bites the Dust",
+//       songDuration: "3.35",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "I Want to Break Free",
+//       songDuration: "3.43",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Under Pressure",
+//       songDuration: "4.04",
+//       songArtist: "Queen feat. David Bowie",
+//     },
+//     {
+//       title: "Who Wants to Live Forever",
+//       songDuration: "5.15",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Bohemian Rhapsody(Live)",
+//       songDuration: "2.28",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Radio Ga Ga",
+//       songDuration: "4:06",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Ay-Oh",
+//       songDuration: "0:41",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Hammer to Fall",
+//       songDuration: "4:04",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "We Are the Champions",
+//       songDuration: "3:57",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Don't Stop Me Now... Revisited",
+//       songDuration: "3:38",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "The Show Must Go On",
+//       songDuration: "4:32",
+//       songArtist: "Queen",
+//     },
+//   ],
+// };
 
-const album2 = {
-  name: "News of the World",
-  artist: "Queen",
-  year: "1977",
-  albumCover: "dogrel.png",
-  duration: "11 Songs, 39 min",
-  songList: [
-    {
-      title: "We Will Rock You",
-      songDuration: "2:01",
-      songArtist: "Queen",
-    },
-    {
-      title: "We Are the Champions",
-      songDuration: "2:59",
-      songArtist: "Queen",
-    },
+// const album2 = {
+//   name: "News of the World",
+//   artist: "Queen",
+//   year: "1977",
+//   albumCover: "dogrel.png",
+//   duration: "11 Songs, 39 min",
+//   songList: [
+//     {
+//       title: "We Will Rock You",
+//       songDuration: "2:01",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "We Are the Champions",
+//       songDuration: "2:59",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Sheer Heart Attack",
-      songDuration: "3:26",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Sheer Heart Attack",
+//       songDuration: "3:26",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "All Dead, All Dead",
-      songDuration: "3:10",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "All Dead, All Dead",
+//       songDuration: "3:10",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Spread Your Wings",
-      songDuration: "4:34",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Spread Your Wings",
+//       songDuration: "4:34",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Fight from the Inside",
-      songDuration: "4.38",
-      songArtist: "Queen",
-    },
-    {
-      title: "Get Down, Make Love",
-      songDuration: "5.55",
-      songArtist: "Queen",
-    },
-    {
-      title: "Sleeping on the Sidewalk",
-      songDuration: "4.26",
-      songArtist: "Queen",
-    },
-    {
-      title: "Who Needs You",
-      songDuration: "2.43",
-      songArtist: "Queen",
-    },
-    {
-      title: "It's Late",
-      songDuration: "4.29",
-      songArtist: "Queen",
-    },
-    {
-      title: "My Melancholy Blues",
-      songDuration: "2.09",
-      songArtist: "Queen",
-    },
-  ],
-};
+//     {
+//       title: "Fight from the Inside",
+//       songDuration: "4.38",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Get Down, Make Love",
+//       songDuration: "5.55",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Sleeping on the Sidewalk",
+//       songDuration: "4.26",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Who Needs You",
+//       songDuration: "2.43",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "It's Late",
+//       songDuration: "4.29",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "My Melancholy Blues",
+//       songDuration: "2.09",
+//       songArtist: "Queen",
+//     },
+//   ],
+// };
 
 const albumCardInfo = [
   {
@@ -574,13 +574,13 @@ const listAlbums = function (object) {
   for (i = 0; i < object.length; i++) {
     let newGeneratedAlbumCard = document.createElement("div");
     newGeneratedAlbumCard.classList.add("col", "album-card2", "px-1");
-    newGeneratedAlbumCard.innerHTML = `<div class="album-card2-cont generatedCard" >
+    newGeneratedAlbumCard.innerHTML = `<a href="album.html"><div class="album-card2-cont generatedCard" >
     <img src="${object[i].album.cover_big}" alt="">
     <h5>${object[i].artist.name}</h5>
     <p>${object[i].title}</p><div class="play-button-div">
       <div class="play-button-bg"></div>
     <i class="bi bi-play-circle-fill play-button"></i></div>
-  </div>`;
+  </div><a/>`;
     newGeneratedAlbumDiv.appendChild(newGeneratedAlbumCard);
   }
   generatedAlbumRow.appendChild(newGeneratedAlbumDiv);
@@ -607,7 +607,6 @@ const generateJsArtistCards = function (object) {
 // generateJsArtistAndAlbums(`metallica`, "artist");
 // generateJsArtistAndAlbums(`behemoth`, "artist");
 
-
 /////////////////////////////////////////////////////////
 //Friday Team Project - Artist Page Code
 
@@ -630,59 +629,43 @@ let objectVariable;
 // }
 
 const getDataForArtistPage = function (artistId) {
-  return (
-    fetch(
-      `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`
-      // `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=70`
-      // `https://striveschool-api.herokuapp.com/api/deezer/search?q=queen`
-    )
-      .then((response) => response.json())
-      .then((artistObject) => {
-        // console.log(artistObject);
-        objectVariable = artistObject;
-        displayJumboTron(objectVariable);
-        return fetch(
-          `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=70`
-          // `https://striveschool-api.herokuapp.com/api/deezer/search?q=${objectVariable.name.toLowerCase()}`
-        )
-          .then((response) => response.json())
-          .then((artistFinal) => {
-            console.log(objectVariable);
-            console.log(artistFinal.data);
-            top5tracks = artistFinal.data;
-            console.log(top5tracks);
-            displayTopTracks(top5tracks);
-            return fetch(
-              `https://striveschool-api.herokuapp.com/api/deezer/search?q=${objectVariable.name.toLowerCase()}`
-            )
-              .then((response) => response.json())
-              .then((popularFinal) => {
-                console.log(popularFinal.data);
-                displayPopularReleases(popularFinal.data);
-              });
-          });
-
-        // top5tracks = artistArray;
-        // top5tracks = artistFinal.data;
-        // console.log(top5tracks);
-        // displayTopTracks(top5tracks);
-      })
-      // .then((artistObject) => artistObject.tracklist.json())
-      // .then((tracklist) => console.log(tracklist))
-      .catch((error) => console.error(error))
-  );
+  return fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`
+    // `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=70`
+    // `https://striveschool-api.herokuapp.com/api/deezer/search?q=queen`
+  )
+    .then((response) => response.json())
+    .then((artistObject) => {
+      // console.log(artistObject);
+      objectVariable = artistObject;
+      displayJumboTron(objectVariable);
+      return fetch(
+        `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=70`
+        // `https://striveschool-api.herokuapp.com/api/deezer/search?q=${objectVariable.name.toLowerCase()}`
+      )
+        .then((response) => response.json())
+        .then((artistFinal) => {
+          console.log(objectVariable);
+          console.log(artistFinal.data);
+          top5tracks = artistFinal.data;
+          console.log(top5tracks);
+          displayTopTracks(top5tracks);
+          return fetch(
+            `https://striveschool-api.herokuapp.com/api/deezer/search?q=${objectVariable.name.toLowerCase()}`
+          )
+            .then((response) => response.json())
+            .then((popularFinal) => {
+              console.log(popularFinal.data);
+              displayPopularReleases(popularFinal.data);
+            });
+        });
+    })
+    .catch((error) => console.error(error));
 };
 
 const displayTopTracks = function (tracksArray) {
-  // tracksArray.forEach((trackObject) => {
-  //   let newTrackRow = document.createElement("tr");
-  //   newTrackRow.innerHTML = ` <td  scope="row">${trackObject.title}</td>
-  //   <td ><img src="${trackObject.album.cover}" alt=""></td>
-  //   <td >${trackObject.title}</td>
-  //   <td >1,012,332,444</td>
-  //   <td >${trackObject.duration / 100}</td>`;
-  // });
   let tableBodyForArtistPage = document.getElementById("artist-body");
+  tableBodyForArtistPage.innerHTML = "";
   for (i = 0; i < tracksArray.length; i++) {
     let newTrackRow = document.createElement("tr");
     newTrackRow.innerHTML = ` <td  scope="row">${i + 1}</td>
@@ -696,6 +679,7 @@ const displayTopTracks = function (tracksArray) {
 
 const displayJumboTron = function (object) {
   let jumbotronCont = document.getElementById("jumbotron-cont");
+  jumbotronCont.innerHTML = "";
   let jumbotronBg = document.createElement("div");
   jumbotronBg.innerHTML = `<div class="jumbotron jumbotron-fluid img-fluid artists-jumbo" style="background-image: url(${object.picture_big}); background-size: 100%; background-position: top; ">
 <div class="container for-about">
@@ -712,36 +696,51 @@ const displayJumboTron = function (object) {
 
 const displayPopularReleases = function (array) {
   let popularReleaseRow = document.getElementById("popular-release-row");
+  popularReleaseRow.innerHTML = "";
   for (i = 0; i < array.length; i++) {
     let newAlbumTile = document.createElement("div");
     newAlbumTile.classList.add("col", "album-card2", "px-1");
-    newAlbumTile.innerHTML = `<div id="news-album-card" class="album-card2-cont">
+    newAlbumTile.innerHTML = `<a href="album.html"><div id="${array[i].id}" class="album-card2-cont">
     <img src="${array[i].album.cover_big}" alt="">
     <h5>${array[i].album.title}</h5>
     <p>1977 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
       <i class="bi bi-play-circle-fill play-button"></i></div>
-  </div>`;
+  </div></a>`;
     popularReleaseRow.appendChild(newAlbumTile);
   }
 };
 
-
 // listAlbums("eminem");
 
+let artistId;
 
-function searchAlbums (album) {
-  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${album}`, {
-   method: "GET", 
+function searchAlbums(query) {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`, {
+    method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((album) => {
+      artistId = album.data[0].artist.id;
+      console.log(artistId);
+      getDataForArtistPage(artistId);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 
- })
- .then((response) =>{
-   return response.json()
- })
- .then(album => {
-   console.log(album)
- })
- .catch(error =>{
-     console.error(error)
-   })
- }
+// Two ways of accessing the end params(queries) of a url
+//In the case we are trying to a query home.html?id=412
 
+//This first way would return "?id=412" so would require string meth ods
+// window.onload = () => {
+//   console.log(window.location.search);
+// };
+
+//This second way would return "412" exactly
+// window.onload = () => {
+//   let query = new URLSearchParams(window.location.search).get("id");
+//   console.log(query);
+// };
