@@ -193,17 +193,23 @@ const album2 = {
   ],
 };
 
-const generateAlbumPageJumbotron = function (album, container) {
+const generateAlbumPageJumbotron = function (albumObj, container) {
   let newJumbotron = document.createElement("div");
   newJumbotron.innerHTML = `
     <div class="jumbotron jumbotron-fluid img-fluid album-jumbo pb-5">
       <div class="for-about-album">
-        <img class="shadow-lg d-none d-sm-inline reflect" src="assets/${album.albumCover}" alt="">
+        <img class="shadow-lg d-none d-sm-inline reflect" src="${
+          albumObj.cover_big
+        }" alt="">
         <div class="mt-3 mt-sm-0">
           <p><strong>ALBUM</strong> </p>
-          <h1 class="album-title-jumbo">${album.name}</h1>
+          <h1 class="album-title-jumbo">${albumObj.title}</h1>
           
-          <p class="album-summary"><img class="round-artist1 reflect" src="assets/mgmt.png" alt=""><strong> ${album.artist}</strong><i class="bi bi-dot"></i>2018<i class="bi bi-dot"></i>${album.duration}</p>
+          <p class="album-summary"><img class="round-artist1 reflect" src="assets/mgmt.png" alt=""><strong> ${
+            albumObj.artist.name
+          }</strong><i class="bi bi-dot"></i>2018<i class="bi bi-dot"></i>${Math.floor(
+    albumObj.duration / 60
+  )}:${Math.floor(albumObj.duration % 60)}</p>
         </div>
       </div>
      
@@ -212,25 +218,24 @@ const generateAlbumPageJumbotron = function (album, container) {
   container.appendChild(newJumbotron);
 };
 
-const generateAlbumTable = function (albumTitle) {
+const generateAlbumTable = function (albumObj) {
   let albumTableBody = document.createElement("tbody");
-  for (i = 0; i < albumTitle.songList.length; i++) {
+  let trackList = albumObj.tracks.data;
+  for (i = 0; i < trackList.length; i++) {
     let newTableRow = document.createElement("tr");
     newTableRow.innerHTML = `<td scope="row" class="align-middle"> ${i + 1}</td>
         
       <td><div>${
-        albumTitle.songList[i].title
+        trackList[i].title
       } </div> <div class="artist-name">Queen</div> </td>
       
-      <td class="align-middle keep-on-page">${
-        albumTitle.songList[i].songDuration
-      }</td>`;
+      <td class="align-middle keep-on-page">${trackList[i].duration}</td>`;
     albumTableBody.appendChild(newTableRow);
   }
   return albumTableBody;
 };
 
-const generateTrackList = function (album) {
+const generateTrackList = function (albumObj) {
   let albumTableContainer = document.createElement("div");
   albumTableContainer.classList.add(
     "main-container",
@@ -259,7 +264,7 @@ const generateTrackList = function (album) {
     <td><i class="bi bi-clock keep-on-page-clock"></i></td>
   </tr>
   </thead>`;
-  let tableBody = generateAlbumTable(album);
+  let tableBody = generateAlbumTable(albumObj);
   table.appendChild(tableBody);
   tableBootRow.appendChild(table);
   albumTableContainer.appendChild(tableBootRow);
@@ -269,14 +274,14 @@ const generateTrackList = function (album) {
   albumTableContainerDiv.appendChild(albumTableContainer);
 };
 
-const getQueryString = function () {
-  let currentUrl = window.location.href.toString();
-  let albumString = currentUrl.slice(-6);
-  console.log(albumString);
-  return albumString;
-};
+// const getQueryString = function () {
+//   let currentUrl = window.location.href.toString();
+//   let albumString = currentUrl.slice(-6);
+//   console.log(albumString);
+//   return albumString;
+// };
 
-const generateAlbum = function (album) {
+const generateAlbum = function (albumObj) {
   let albumJumbotronContainer = document.getElementById(
     "album-jumbotron-container"
   );
@@ -287,36 +292,46 @@ const generateAlbum = function (album) {
   albumJumbotronContainer.innerHTML = "";
   albumTableContainerDiv.innerHTML = "";
   //   console.log(albumJumbotronContainer);
-  generateAlbumPageJumbotron(album, albumJumbotronContainer);
-  generateTrackList(album);
+  generateAlbumPageJumbotron(albumObj, albumJumbotronContainer);
+  generateTrackList(albumObj);
 };
 
-const queryString = getQueryString();
+// const queryString = getQueryString();
 
-const choosePage = function () {
-  if (queryString === "album1") {
-    generateAlbum(album1);
-  }
+// const choosePage = function () {
+//   if (queryString === "album1") {
+//     generateAlbum(album1);
+//   }
 
-  if (queryString === "album2") {
-    generateAlbum(album2);
-  }
-};
+//   if (queryString === "album2") {
+//     generateAlbum(album2);
+//   }
+// };
 
-choosePage();
+// choosePage();
 
 // feature-fetchAPI
-function searchAlbums(album) {
-  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${album}`, {
-    method: "GET",
-  })
+function getAlbumData(albumNumber) {
+  fetch(
+    `https://striveschool-api.herokuapp.com/api/deezer/album/${albumNumber}`,
+    {
+      method: "GET",
+    }
+  )
     .then((response) => {
       return response.json();
     })
     .then((album) => {
       console.log(album);
+      generateAlbum(album);
     })
     .catch((error) => {
       console.error(error);
     });
 }
+
+window.onload = () => {
+  let query = new URLSearchParams(window.location.search).get("albumId");
+  console.log(query);
+  getAlbumData(query);
+};

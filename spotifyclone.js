@@ -702,7 +702,7 @@ const displayPopularReleases = function (array) {
   for (i = 0; i < array.length; i++) {
     let newAlbumTile = document.createElement("div");
     newAlbumTile.classList.add("col", "album-card2", "px-1");
-    newAlbumTile.innerHTML = `<a href="album.html?albumId=${array[i].id}"><div id="${array[i].id}" class="album-card2-cont">
+    newAlbumTile.innerHTML = `<a href="album.html?albumId=${array[i].album.id}"><div id="${array[i].id}" class="album-card2-cont">
     <img src="${array[i].album.cover_big}" alt="">
     <h5>${array[i].album.title}</h5>
     <p>1977 - Album</p><div class="play-button-div"> <div class="play-button-bg"></div>
