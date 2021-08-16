@@ -628,7 +628,7 @@ let objectVariable;
 //     });
 // }
 
-const getDataForArtistPage = function (artistId) {
+const getDataForArtistPage = function (artistId = 412) {
   // window.location.href = "artist.html";
   return fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`
@@ -732,6 +732,10 @@ function searchAlbums(query) {
       console.error(error);
     });
 }
+
+window.onload = () => {
+  getDataForArtistPage();
+};
 
 // Two ways of accessing the end params(queries) of a url
 //In the case we are trying to a query home.html?id=412
