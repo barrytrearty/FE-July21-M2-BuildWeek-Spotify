@@ -1,197 +1,197 @@
 "strict mode";
 
-const album1 = {
-  name: "Bohemian Rhapsody (The Original Soundtrack)",
-  artist: "Queen",
-  year: "2018",
-  albumCover: "electric-warrior.png",
-  duration: "22 Songs, 1 hr 19 min",
-  songList: [
-    {
-      title: "20th Century Fox Fanfare",
-      songDuration: "0.25",
-      songArtist: "Queen",
-    },
-    {
-      title: "Somebody to Love",
-      songDuration: "4.56",
-      songArtist: "Queen",
-    },
+// const album1 = {
+//   name: "Bohemian Rhapsody (The Original Soundtrack)",
+//   artist: "Queen",
+//   year: "2018",
+//   albumCover: "electric-warrior.png",
+//   duration: "22 Songs, 1 hr 19 min",
+//   songList: [
+//     {
+//       title: "20th Century Fox Fanfare",
+//       songDuration: "0.25",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Somebody to Love",
+//       songDuration: "4.56",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Doing All Right... Revisited",
-      songDuration: "3.17",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Doing All Right... Revisited",
+//       songDuration: "3.17",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Keep Yourself Alive",
-      songDuration: "3.56",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Keep Yourself Alive",
+//       songDuration: "3.56",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Killer Queen",
-      songDuration: "2.59",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Killer Queen",
+//       songDuration: "2.59",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Fat Bottomed Girls",
-      songDuration: "4.38",
-      songArtist: "Queen",
-    },
-    {
-      title: "Bohemian Rhapsody",
-      songDuration: "5.55",
-      songArtist: "Queen",
-    },
-    {
-      title: "Now I'm Here",
-      songDuration: "4.26",
-      songArtist: "Queen",
-    },
-    {
-      title: "Crazy Little Thing Called Love",
-      songDuration: "2.43",
-      songArtist: "Queen",
-    },
-    {
-      title: "Love of My Life",
-      songDuration: "4.29",
-      songArtist: "Queen",
-    },
-    {
-      title: "We Will Rock You",
-      songDuration: "2.09",
-      songArtist: "Queen",
-    },
-    {
-      title: "Another One Bites the Dust",
-      songDuration: "3.35",
-      songArtist: "Queen",
-    },
-    {
-      title: "I Want to Break Free",
-      songDuration: "3.43",
-      songArtist: "Queen",
-    },
-    {
-      title: "Under Pressure",
-      songDuration: "4.04",
-      songArtist: "Queen feat. David Bowie",
-    },
-    {
-      title: "Who Wants to Live Forever",
-      songDuration: "5.15",
-      songArtist: "Queen",
-    },
-    {
-      title: "Bohemian Rhapsody(Live)",
-      songDuration: "2.28",
-      songArtist: "Queen",
-    },
-    {
-      title: "Radio Ga Ga",
-      songDuration: "4:06",
-      songArtist: "Queen",
-    },
-    {
-      title: "Ay-Oh",
-      songDuration: "0:41",
-      songArtist: "Queen",
-    },
-    {
-      title: "Hammer to Fall",
-      songDuration: "4:04",
-      songArtist: "Queen",
-    },
-    {
-      title: "We Are the Champions",
-      songDuration: "3:57",
-      songArtist: "Queen",
-    },
-    {
-      title: "Don't Stop Me Now... Revisited",
-      songDuration: "3:38",
-      songArtist: "Queen",
-    },
-    {
-      title: "The Show Must Go On",
-      songDuration: "4:32",
-      songArtist: "Queen",
-    },
-  ],
-};
+//     {
+//       title: "Fat Bottomed Girls",
+//       songDuration: "4.38",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Bohemian Rhapsody",
+//       songDuration: "5.55",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Now I'm Here",
+//       songDuration: "4.26",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Crazy Little Thing Called Love",
+//       songDuration: "2.43",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Love of My Life",
+//       songDuration: "4.29",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "We Will Rock You",
+//       songDuration: "2.09",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Another One Bites the Dust",
+//       songDuration: "3.35",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "I Want to Break Free",
+//       songDuration: "3.43",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Under Pressure",
+//       songDuration: "4.04",
+//       songArtist: "Queen feat. David Bowie",
+//     },
+//     {
+//       title: "Who Wants to Live Forever",
+//       songDuration: "5.15",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Bohemian Rhapsody(Live)",
+//       songDuration: "2.28",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Radio Ga Ga",
+//       songDuration: "4:06",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Ay-Oh",
+//       songDuration: "0:41",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Hammer to Fall",
+//       songDuration: "4:04",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "We Are the Champions",
+//       songDuration: "3:57",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Don't Stop Me Now... Revisited",
+//       songDuration: "3:38",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "The Show Must Go On",
+//       songDuration: "4:32",
+//       songArtist: "Queen",
+//     },
+//   ],
+// };
 
-const album2 = {
-  name: "News of the World",
-  artist: "Queen",
-  year: "1977",
-  albumCover: "dogrel.png",
-  duration: "11 Songs, 39 min",
-  songList: [
-    {
-      title: "We Will Rock You",
-      songDuration: "2:01",
-      songArtist: "Queen",
-    },
-    {
-      title: "We Are the Champions",
-      songDuration: "2:59",
-      songArtist: "Queen",
-    },
+// const album2 = {
+//   name: "News of the World",
+//   artist: "Queen",
+//   year: "1977",
+//   albumCover: "dogrel.png",
+//   duration: "11 Songs, 39 min",
+//   songList: [
+//     {
+//       title: "We Will Rock You",
+//       songDuration: "2:01",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "We Are the Champions",
+//       songDuration: "2:59",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Sheer Heart Attack",
-      songDuration: "3:26",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Sheer Heart Attack",
+//       songDuration: "3:26",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "All Dead, All Dead",
-      songDuration: "3:10",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "All Dead, All Dead",
+//       songDuration: "3:10",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Spread Your Wings",
-      songDuration: "4:34",
-      songArtist: "Queen",
-    },
+//     {
+//       title: "Spread Your Wings",
+//       songDuration: "4:34",
+//       songArtist: "Queen",
+//     },
 
-    {
-      title: "Fight from the Inside",
-      songDuration: "4.38",
-      songArtist: "Queen",
-    },
-    {
-      title: "Get Down, Make Love",
-      songDuration: "5.55",
-      songArtist: "Queen",
-    },
-    {
-      title: "Sleeping on the Sidewalk",
-      songDuration: "4.26",
-      songArtist: "Queen",
-    },
-    {
-      title: "Who Needs You",
-      songDuration: "2.43",
-      songArtist: "Queen",
-    },
-    {
-      title: "It's Late",
-      songDuration: "4.29",
-      songArtist: "Queen",
-    },
-    {
-      title: "My Melancholy Blues",
-      songDuration: "2.09",
-      songArtist: "Queen",
-    },
-  ],
-};
+//     {
+//       title: "Fight from the Inside",
+//       songDuration: "4.38",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Get Down, Make Love",
+//       songDuration: "5.55",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Sleeping on the Sidewalk",
+//       songDuration: "4.26",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "Who Needs You",
+//       songDuration: "2.43",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "It's Late",
+//       songDuration: "4.29",
+//       songArtist: "Queen",
+//     },
+//     {
+//       title: "My Melancholy Blues",
+//       songDuration: "2.09",
+//       songArtist: "Queen",
+//     },
+//   ],
+// };
 
 const generateAlbumPageJumbotron = function (albumObj, container) {
   let newJumbotron = document.createElement("div");
@@ -311,7 +311,7 @@ const generateAlbum = function (albumObj) {
 // choosePage();
 
 // feature-fetchAPI
-function getAlbumData(albumNumber) {
+const getAlbumData = function (albumNumber = "75621062") {
   fetch(
     `https://striveschool-api.herokuapp.com/api/deezer/album/${albumNumber}`,
     {
@@ -328,10 +328,14 @@ function getAlbumData(albumNumber) {
     .catch((error) => {
       console.error(error);
     });
-}
+};
 
 window.onload = () => {
   let query = new URLSearchParams(window.location.search).get("albumId");
   console.log(query);
-  getAlbumData(query);
+  if (query) {
+    getAlbumData(query);
+  } else {
+    getAlbumData();
+  }
 };
